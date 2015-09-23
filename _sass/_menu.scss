@@ -1,0 +1,67 @@
+/*----------------------------
+---------Menu----------------
+*/
+.active{
+  color: leghten($second-link-color, 20%);
+}
+.nav li {
+  float:right;
+
+}
+.nav li a {
+  text-decoration: none;
+  display: block;
+  padding: 0px 20px 0px 20px;
+  font-weight: bold;
+  font-size: 1.1em;
+  line-height: 1.1;
+  color: #fff;
+
+}
+.nav li a:hover{
+  color: $second-link-color;
+  text-decoration: underline;
+  transition: all 0.4s ease-in-out;
+}
+ 
+.social li a {
+
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px 5px 20px;
+  font-weight: bold;
+  font-size: 1.1em;
+  line-height: 1.1;
+  color: #ccc;
+
+
+}
+.social li a:hover{
+  color: $second-link-color;
+  text-decoration: underline;
+  transition: all 0.4s ease-in-out;
+}
+ 
+
+
+.button.button-email,
+button.button-email,
+input[type="submit"].button-email,
+input[type="reset"].button-email,
+input[type="button"].button-email {
+  color: #FFF;
+  background-color: $second-link-color;
+  border-color: $second-link-color; }
+.button.button-email:hover,
+button.button-email:hover,
+input[type="submit"].button-email:hover,
+input[type="reset"].button-email:hover,
+input[type="button"].button-email:hover,
+.button.button-email:focus,
+button.button-email:focus,
+input[type="submit"].button-email:focus,
+input[type="reset"].button-email:focus,
+input[type="button"].button-email:focus {
+  color: #FFF;
+  background-color: darken($second-link-color, 13.5%);
+  border-color: darken($second-link-color, 13.5%); }

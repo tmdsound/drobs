@@ -1,0 +1,15 @@
+---
+layout: page
+title: Карта сайта
+header: Pages
+group: navigation
+---
+{% include JB/setup %}
+
+<h2>Все страницы</h2>
+<ul>
+{% assign pages_list = site.pages %}
+{% include JB/pages_list %}
+</ul>
+
+{% include JB/setup %}

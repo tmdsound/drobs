@@ -1,0 +1,48 @@
+/*--------------
+Blog
+--------------*/
+.title-blog {
+  margin-left: 40px;
+}
+section {
+  margin-top: 40px ;
+}
+.data{
+  text-transform: uppercase;
+  font-size: 14px;
+  width: 80%;
+  margin: 0 auto;
+}
+.data-big{
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 30px;
+  line-height: 50px;
+  font-weight: bold;
+  font-family: tahoma;
+
+
+}
+.blog-img{text-align: center;
+
+}
+.blog {
+  margin-top: 20px;
+  span{
+    line-height: 60px;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+
+}
+
+.social-share, .gallery-info-property{
+    border-top-width: 2px;
+    border-top-style: solid;
+    padding-top: 40px;
+}
+
+#header-inn-right, .team-item-con-back, .related-post-unit-a::after, .related-post-unit-h3, .single-image-mask, .social-share-button {
+    -webkit-transition: opacity 0.5s ease 0s;
+            transition: opacity 0.5s ease 0s;}
+

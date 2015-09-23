@@ -1,0 +1,62 @@
+# Site settings
+title : Droboshok
+tagline: 'Скорей ныряй в мой тихий омут
+- Ты нравишься моим чертям.'
+description: 'Thoughts, stories and ideas.'
+author :
+  name : Andrey Amelin
+  email : droboshok@ua.fm
+  github : droboshok
+  twitter : droboshok
+  facebook : droboshok
+
+baseurl: "" # the subpath of your site, e.g. /blog/
+ # the base hostname & protocol for your site
+# url: http://droboshok.in.ua
+url: http://localhost:4000
+
+paginate: 4
+paginate_path: /page:num
+gems:
+    - jekyll-paginate
+
+
+# Build settings
+markdown: kramdown
+# markdown: rogue
+# This is the default format. 
+# For more see: http://jekyllrb.com/docs/permalinks/
+permalink: /:categories/:year/:month/:title.html
+
+
+
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md","node_modules", "gulpfile.js", "PR.sublime-project","Gemfile", "Gemfile.lock", "_config.yml"]
+highlighter: pygments
+
+flickr :
+  api_key : 84ad7df61b82e136a98bbf99fa997b3e
+
+assets:
+  css : /assets/css
+  js : /assets/js
+
+
+JB :
+  version : 0.3.0
+  BASE_PATH : false
+
+
+  ASSET_PATH : false
+
+  archive_path: /archive.html
+  categories_path : /categories.html
+  tags_path : /tags.html
+  rss_path : /rss.xml
+
+
+  comments :
+    facebook :
+      appid : 111129072574112
+      num_posts: 5
+      width: 580
+      colorscheme: light

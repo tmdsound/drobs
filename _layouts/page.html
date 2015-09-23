@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<div class="u-cf"></div>
+<article> 
+  <div class="container">
+    <div class="row">
+      <h1> 
+        {% assign lit =  page.title | slice: 0 %}
+          <span class="high-light">{{ lit }}</span>{{ page.title | remove: lit }}            
+      </h1>
+
+      {{ content }}
+
+    </div>
+  </div>
+</article>

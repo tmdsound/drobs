@@ -1,0 +1,44 @@
+<script type="text/javascript">
+    window.addEventListener('DOMContentLoaded', function() {
+        new QueryLoader2(document.querySelector("body"), {
+            barColor: "#efefef",
+            backgroundColor: "#3e4156",
+            percentage: true,
+            barHeight: 1,
+            minimumTime: 200,
+            fadeOutTime: 1000
+        });
+    });
+</script>
+<header>  
+  <div id="header" class="container">
+      <div class="row">
+      <div class="four columns">
+      <a href="/index.html" class="logo"><h5>DROBO<span class="high-light">SHOK</span></h5></a>
+
+      
+    </div>
+
+    <div class="eight columns">
+    <nav class="nav clearfix">
+      
+      <ul>
+              {% for link in site.data.links %}
+                {% assign active = nil %}
+                  {% assign link_menu = link.url | remove: ".html" %}
+                  {% if page.url contains link_menu %}
+                    {% assign active = 'active' %}
+                   
+                  {% endif %}
+                    <li class="menu-item {% if forloop.first %}{% endif %} {{ active }} {% if forloop.last %}{% endif %}">
+                       <a href="{{ link.url }}">{{ link.title }}</a>
+                    </li>
+
+
+                {% endfor %}
+      </ul>
+    </nav>
+    </div>
+    </div>
+  </div>
+</header>

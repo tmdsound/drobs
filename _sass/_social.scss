@@ -1,0 +1,39 @@
+
+.social-share-button {
+  width: 20%;
+  min-width: 62px;
+  height: 30px;
+  font-size: 13px;
+  float: left;
+  padding: 0;
+  margin-top: 13px;
+  margin-left: 5%;
+  border-radius: 2px;
+  background-color: #5975b1;
+  color: #fff;
+  font-weight: bold;
+  line-height: 0px }
+
+.social-share-button:hover {
+  opacity: .8; }
+
+.social-share-buttons {
+  margin-left: -5%;
+  margin-top: -13px;
+  clear: both; }
+
+.social-share-twitter.social-share-button {
+  background-color: #53c3ee; }
+
+.social-share-google-plus.social-share-button {
+  background-color: #d54e55; }
+
+.social-share-pinterest.social-share-button {
+  background-color: #de4d35; }
+
+.social-share-linkedin.social-share-button {
+  background-color: #007bb6; }
+
+.social-share-vk.social-share-button {
+  background-color: #45668e; }
+
