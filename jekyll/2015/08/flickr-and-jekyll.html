@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html style="height: auto;" class=" js no-touch cssanimations csstransforms csstransforms3d csstransitions inlinesvg cssfilters svgfilters" lang="ru" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Как добавить изображение из Flickr в блог Jekyll</title>
+  <meta name="description" content="Установка плагиа в генератор сайтов Jekyll для пользователей Flickr">
+  <meta name="author" content="Andrey Amelin">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="fb:admins" content="100007240991418"/>
+  <meta property="fb:app_id" content="111129072574112" />
+
+  <meta property="og:locale" content="ru_RU" />
+
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@droboshok"/>
+
+
+  <meta property="og:title" content="Как добавить изображение из Flickr в блог Jekyll" />
+  <meta property="og:url" content="/jekyll/2015/08/flickr-and-jekyll.html" />
+  
+  <meta property="og:description" content="Установка плагиа в генератор сайтов Jekyll для пользователей Flickr" />
+  
+  <meta property="og:image" content="https://farm1.staticflickr.com/636/20348431344_ac4689d224_m.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
+  <!-- <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="/assets/css/normalize.css">
+  <link rel="stylesheet" href="/assets/css/skeleton.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+<script type="text/javascript" src="/assets/js/queryloader2.min.js"></script>
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+
+<body>
+
+
+<script type="text/javascript">
+    window.addEventListener('DOMContentLoaded', function() {
+        new QueryLoader2(document.querySelector("body"), {
+            barColor: "#efefef",
+            backgroundColor: "#3e4156",
+            percentage: true,
+            barHeight: 1,
+            minimumTime: 200,
+            fadeOutTime: 1000
+        });
+    });
+</script>
+<header>  
+  <div id="header" class="container">
+      <div class="row">
+      <div class="four columns">
+      <a href="/index.html" class="logo"><h5>DROBO<span class="high-light">SHOK</span></h5></a>
+
+      
+    </div>
+
+    <div class="eight columns">
+    <nav class="nav clearfix">
+      
+      <ul>
+              
+                
+                  
+                  
+                    <li class="menu-item   ">
+                       <a href="/archive.html">Архив</a>
+                    </li>
+
+
+                
+                
+                  
+                  
+                    <li class="menu-item   ">
+                       <a href="/categories.html">Рубрики</a>
+                    </li>
+
+
+                
+                
+                  
+                  
+                    <li class="menu-item   ">
+                       <a href="/about.html">Автор</a>
+                    </li>
+
+
+                
+      </ul>
+    </nav>
+    </div>
+    </div>
+  </div>
+</header>
+  
+  <div class="u-cf"></div>
+<article> 
+<div class="container">
+  <div class="row">
+    
+
+      <h1 class="title-blog"> 
+        
+          <span class="high-light">К</span>ак добавить изображение из Flickr в блог Jekyll            
+      </h1>
+
+
+      <div class="twelve columns images" align="center">
+        <a href="https://farm1.staticflickr.com/636/20348431344_ac4689d224_c.jpg " title="Как добавить изображение из Flickr в блог Jekyll"  >
+                      <img src="https://farm1.staticflickr.com/636/20348431344_ac4689d224_c.jpg " alt="Как добавить изображение из Flickr в блог Jekyll" align="center">
+                    </a>
+      </div><!--end 4-->
+
+                
+                  <div class="twelve columns main">
+                  
+                  <p>Мне понравилась идея когда я могу встроить изображение в свой сайт из популярных фотохостингов.Я решил использовать для этих целей Flickr по многим причинам. Во-первых достаточно большое дисковое пространство - 1 ТбБ во-вторых много пользовательских режимов, в-третьих достаточно предустановленных режимов отображения фото и видео, в-четвертых довольно таки высокая скорость доступа.Для создания своих статических сайтов я использую генератор <a href="/jekyll/001.html">Jekyll</a> и сегодня я расскажу как добавить и настроить плагин для вставки изображений.</p>
+
+<p>Для начала нам необходимо создать приложение,у кого нет аккаунта в Flickr - идём и <a href="https://www.flickr.com">регестрируемся</a></p>
+
+<p>Переходим по <a href="https://www.flickr.com/services/apps/create/">ссылке</a>далее жмем  <strong>Request an Api Key,</strong> здесь нам предлагают выбрать для комерческого ипользования приложения или нет. Выбираем <strong>APPLY FOR NON-COMERCIAL KEY</strong>
+<img src="https://farm1.staticflickr.com/588/20995023771_394fa9b393.jpg" width="500" height="247" alt="регестрация на Flickr" title="регестрация на Flickr" /></p>
+
+<p>Вписываем названия нашего приложения и описание, соглашаемся с условиями и нажимаем кнопку “Отправить”
+<img src="https://farm6.staticflickr.com/5792/20366456493_0d018251b4.jpg" width="500" height="247" alt="api_key on Flickr" title="" /></p>
+
+<p>Как показано на рисунке нам предоставили 
+api_key и secret
+Для нашего плагина нам понадобится api_key:6cef62fa12e54f74f3770d9d6ef2bec2
+Что еще нам понадобится от Flickr - это photoID изображения.Выбираем изображение которое вы хотите разместить на сайте,в адресной строке браузера видим ссылку типа моей -</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"> <span class="ss">https</span><span class="p">:</span><span class="sr">//</span><span class="n">www</span><span class="o">.</span><span class="n">flickr</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">photos</span><span class="o">/</span><span class="mi">135036651</span><span class="vi">@N08</span><span class="o">/</span><span class="mi">20348431344</span><span class="o">/</span><span class="k">in</span><span class="o">/</span><span class="n">dateposted</span><span class="o">-</span><span class="kp">public</span><span class="o">/</span>
+ </code></pre></figure>
+
+<p>цифры 20348431344 и есть photoID нашего изображения.</p>
+
+<p>Теперь переходим к нашему сайту. Нам понадобится установленный Jekyll и плагин, исходный код которого можно скачать на <a href="https://github.com/droboshok/Flickr-Photo-Jekyll">GitHub</a>. Добавьте файл плагина <em>main_flickr.rb</em> в папку _plugins, если такой папки нет - то создайте её.</p>
+
+<p>Так же нам понадобится внести данные api_key из Flickr в файл _config.yml</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="lineno">1</span> <span class="ss">flickr</span><span class="p">:</span>
+<span class="lineno">2</span>     <span class="ss">api_key</span><span class="p">:</span> <span class="mi">6</span><span class="n">cef62fa12e54f74f3770d9d6ef2bec2</span>
+<span class="lineno">3</span>      
+<span class="lineno">4</span>      </code></pre></figure>
+
+<p>Создаем новую страницу или редактируем уже существующую. и в место где вы хотите разместить изображение - вставляем код</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">{</span><span class="o">%</span> <span class="n">main_photo</span> <span class="mi">20348431344</span> <span class="o">%</span><span class="p">}</span></code></pre></figure>
+
+<p>где 20348431344 это photoID нашего изображения
+Размер изображения по умолчанию 500х375
+Если вы хотите установить другой размер, тогда вам необходимо указать его в одинарных кавычках после изображения.Например:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"> 
+ <span class="p">{</span><span class="o">%</span> <span class="n">main_photo</span> <span class="mi">20348431344</span> <span class="s1">&#39;Square&#39;</span><span class="o">%</span><span class="p">}</span>
+ 
+ </code></pre></figure>
+
+<p>выведет изображение 75х75
+Вот список предустановленных размеров:</p>
+
+<ul>
+  <li>‘Square’ = 75x75</li>
+  <li>‘Large Square’ = 150x150</li>
+  <li>‘Thumbnail’ = 75x100</li>
+  <li>‘Small’ = 180x240</li>
+  <li>‘Small 320’ = 240x320</li>
+  <li>‘Medium’ = 375x500</li>
+  <li>‘Medium 640’ = 480x640</li>
+  <li>‘Medium 800’ = 600x800</li>
+  <li>‘Large’ = 768x1024</li>
+  <li>‘Large 1600’ = 1200x1600</li>
+  <li>‘Original’ = 1200x1600</li>
+</ul>
+
+<p>За более подробной информацией можно обратиться к <a href="https://www.flickr.com/services/api/">API Documentation</a></p>
+
+<p>Отлично, теперь вы сможете размещать свои фото из Flickr на своем сайте.
+Спасибо за внимание! 
+По вопросам редактирования параметров плагина обращайтесь на почту или соц.сети.</p>
+
+
+                 </div>
+
+
+
+
+
+  </div>
+
+                <div class="row meta-social">
+
+                  <div class="six columns">
+                    <ul class="gallery-info-property">
+                      <li class="gallery-info-property-li">
+                        <div class="gallery-info-property-item gallery-info-property-tit date">дата</div>
+                        <div class="gallery-info-property-item gallery-info-property-con"> 29 08 2015 </div>
+                      </li>
+                      <li class="gallery-info-property-li">
+                        <div class="gallery-info-property-item gallery-info-property-tit author">автор</div>
+                        <div class="gallery-info-property-item gallery-info-property-con">Andrey Amelin</div>
+                      </li>
+                    </ul>
+
+                  </div>
+                  <div class="six columns">
+                    <!--Social network share icon-->
+                    <div class="social-share clearfix ">
+                        <div class="social-share-buttons ">
+                          <button onclick="window.open('http://www.facebook.com/sharer.php?s=100&p[title]=Как добавить изображение из Flickr в блог Jekyll &amp;p[summary]=Полное описание установки, настройки и использования Jekyll&amp;p[url]=/jekyll/2015/08/flickr-and-jekyll.html&amp;p[images][0]=| append: "_m.jpg "', 'facebookShare', 'width=626,height=436'); return false;" title="Как добавить изображение из Flickr в блог Jekyll" class="social-share-facebook social-share-button"><span class="fa fa-facebook"></span> Share</button>
+                          <button onclick="window.open('http://twitter.com/share?text=Как добавить изображение из Flickr в блог Jekyll ;url=/jekyll/2015/08/flickr-and-jekyll.html', 'twitterShare', 'width=626,height=436'); return false;" title="Как добавить изображение из Flickr в блог Jekyll" class="social-share-twitter social-share-button"><span class="fa fa-twitter"></span> Tweet</button>
+                          <button onclick="window.open('https://plusone.google.com/_/+1/confirm?hl=ru-RU&amp;url=/jekyll/2015/08/flickr-and-jekyll.html', 'googleShare', 'width=626,height=436'); return false;" title="Как добавить изображение из Flickr в блог Jekyll" target="_blank" class="social-share-google-plus social-share-button"><span class="fa fa-google-plus"></span> Share</button>
+                          <button onclick="window.open('https://vk.com/share.php?url=/jekyll/2015/08/flickr-and-jekyll.html&amp;media=| append: "_m.jpg "&amp;text=Как добавить изображение из Flickr в блог Jekyll, 'VK.Share', 'width=750,height=350'); return false;" title="Как добавить изображение из Flickr в блог Jekyll" class="social-share-vk social-share-button"><span class="fa fa-vk"></span> Share</button>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+
+                <!--Post navigation-->
+ <div class="container">
+  <div class="row">
+    
+
+        
+            <a href="/jekyll/2015/01/links.html" class="post-navi-a post-navi-a-pre six columns"><div class="post-navi-a-inn"><span class="post-navi-front"><i class="fa fa-long-arrow-left"></i> БЛИЗКО</span><span class="post-navi-back">Подсветка меню в Jekyll</span></div></a>
+            <a href="/jekyll/2015/09/jekyll.html" class="post-navi-a post-navi-a-pre six columns"><div class="post-navi-a-inn"><span class="post-navi-front">ДАЛЕКО <i class="fa fa-long-arrow-right"></i></span><span class="post-navi-back">Большая шпаргалка для Jekyll. </span></div></a>
+        
+
+  </div>
+</div>
+
+
+
+</div>
+            
+
+
+</article>
+
+    
+<footer>
+      <div class="container">
+        <div class="row footer-stuff">
+              <div class="columns six">
+              <a href="index.html" class="logo-1">DROBO<span class="high-light">SHOK</span></a>
+                <ol class="social">
+                  <li><a title="Twitter" href="https://www.twitter.com/droboshok" target="_blank"><i class="fa fa-twitter"></i>Twitter</a></li>
+                  <li><a title="Facebook" href="https://www.facebook.com/droboshok" target="_blank"><i class="fa fa-facebook "></i>Facebook</a></li>
+                  <li><a title="Instagram" href="https://instagram.com/droboshok" target="_blank"><i class="fa fa-instagram"></i>Instagram</a></li>
+                  <li><a title="Github" href="https://github.com/droboshok/" target="_blank"><i class="fa fa-github-alt"></i>Github</a></li>
+
+                </ol>
+              </div>
+      
+              <div class="columns six">
+              <p><h5>Подпишись</h5> на новости Droboshok.<br>Будь в курсе всех изменений в моем блоге</p>
+                <link type="text/css" rel="stylesheet" href="https://cp.unisender.com/v5/template-editor-new/js/lib/datepicker/pikaday.css"/><script type="text/javascript" src="https://cp.unisender.com/v5/template-editor-new/js/lib/moment/moment-with-langs.min.js"></script><script type="text/javascript" src="https://cp.unisender.com/v5/template-editor-new/js/lib/datepicker/pikaday.js"></script><script type="text/javascript" src="https://cp.unisender.com/v5/template-editor-new/js/app/lang/ru.js"></script><script type="text/javascript" src="https://cp.unisender.com/v5/template-editor-new/js/app/preview/form/form-js.js"></script>
+                <form method="POST" action="http://cp.unisender.com/ru/subscribe?hash=5yxccg4j88dqew9t8f9i46j694zq79y4do97317e" name="subscribtion_form" target="_blank" class="row">
+                  <div class="eight columns">
+        
+                    <input class="u-full-width" name="email" value="" type="text" placeholder="Ваш Email">
+                  </div>
+                  <div class="columns four">
+                    <input class="button-email" value="Подписаться" type="submit">
+                  </div>
+    <input name="charset" value="UTF-8" type="hidden">
+    <input name="default_list_id" value="5728670" type="hidden">
+    <input name="overwrite" value="2" type="hidden">
+    <input name="is_v5" value="1" type="hidden">
+</form>
+
+
+              </div>
+            </div></div>
+    </footer>  
+
+  
+    
+    
+  <!-- JS
+  ================================================== -->
+<script type="text/javascript" src="/assets/js/jquery-2.1.3.min.js"></script>
+  
+
+</body>
+</html>
+
