@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html style="height: auto;" class=" js no-touch cssanimations csstransforms csstransforms3d csstransitions inlinesvg cssfilters svgfilters" lang="ru" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Большая шпаргалка для Jekyll. </title>
+  <meta name="description" content="Полное описание установки, настройки и использования Jekyll">
+  <meta name="author" content="Andrey Amelin">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="fb:admins" content="100007240991418"/>
+  <meta property="fb:app_id" content="111129072574112" />
+
+  <meta property="og:locale" content="ru_RU" />
+
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@droboshok"/>
+
+
+  <meta property="og:title" content="Большая шпаргалка для Jekyll. " />
+  <meta property="og:url" content="/jekyll/2015/09/jekyll.html" />
+  
+  <meta property="og:description" content="Полное описание установки, настройки и использования Jekyll" />
+  
+  <meta property="og:image" content="https://farm1.staticflickr.com/778/21056160082_dfb20de9b3_m.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
+  <!-- <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="/assets/css/normalize.css">
+  <link rel="stylesheet" href="/assets/css/skeleton.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+<script type="text/javascript" src="/assets/js/queryloader2.min.js"></script>
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+
+<body>
+
+
+<script type="text/javascript">
+    window.addEventListener('DOMContentLoaded', function() {
+        new QueryLoader2(document.querySelector("body"), {
+            barColor: "#efefef",
+            backgroundColor: "#3e4156",
+            percentage: true,
+            barHeight: 1,
+            minimumTime: 200,
+            fadeOutTime: 1000
+        });
+    });
+</script>
+<header>  
+  <div id="header" class="container">
+      <div class="row">
+      <div class="four columns">
+      <a href="/index.html" class="logo"><h5>DROBO<span class="high-light">SHOK</span></h5></a>
+
+      
+    </div>
+
+    <div class="eight columns">
+    <nav class="nav clearfix">
+      
+      <ul>
+              
+                
+                  
+                  
+                    <li class="menu-item   ">
+                       <a href="/archive.html">Архив</a>
+                    </li>
+
+
+                
+                
+                  
+                  
+                    <li class="menu-item   ">
+                       <a href="/categories.html">Рубрики</a>
+                    </li>
+
+
+                
+                
+                  
+                  
+                    <li class="menu-item   ">
+                       <a href="/about.html">Автор</a>
+                    </li>
+
+
+                
+      </ul>
+    </nav>
+    </div>
+    </div>
+  </div>
+</header>
+  
+  <div class="u-cf"></div>
+<article> 
+<div class="container">
+  <div class="row">
+    
+
+      <h1 class="title-blog"> 
+        
+          <span class="high-light">Б</span>ольшая шпаргалка для Jekyll.             
+      </h1>
+
+
+      <div class="twelve columns images" align="center">
+        <a href="https://farm1.staticflickr.com/778/21056160082_dfb20de9b3_c.jpg " title="Большая шпаргалка для Jekyll. "  >
+                      <img src="https://farm1.staticflickr.com/778/21056160082_dfb20de9b3_c.jpg " alt="Большая шпаргалка для Jekyll. " align="center">
+                    </a>
+      </div><!--end 4-->
+
+                
+                  <div class="twelve columns main">
+                  
+                  <p>Наиболее чосто используемые фильтры и команды Jekyll. Их описание установки, настройки и использования.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="o">$</span> <span class="nt">gem</span> <span class="nt">install</span> <span class="nt">jekyll</span></code></pre></figure>
+
+<p>Структура</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    <span class="o">./</span>
+    <span class="err">├──</span> <span class="nt">_config</span><span class="nc">.yml</span>
+    <span class="err">│</span>
+    <span class="err">├──</span> <span class="nt">_data</span><span class="o">/</span>
+    <span class="err">│</span>   <span class="err">└──</span> <span class="o">...</span>
+    <span class="err">│</span>
+    <span class="err">├──</span> <span class="nt">_drafts</span><span class="o">/</span>
+    <span class="err">│</span>   <span class="err">└──</span> <span class="o">...</span>
+    <span class="err">│</span>
+    <span class="err">├──</span> <span class="nt">_posts</span><span class="o">/</span>
+    <span class="err">│</span>   <span class="err">└──</span> <span class="nt">2014-01-01-hello</span><span class="nc">.md</span>
+    <span class="err">│</span>
+    <span class="err">├──</span> <span class="nt">_layouts</span><span class="o">/</span>
+    <span class="err">│</span>   <span class="err">├──</span> <span class="nt">default</span><span class="nc">.html</span>
+    <span class="err">│</span>   <span class="err">└──</span> <span class="nt">post</span><span class="nc">.html</span>
+    <span class="err">│</span>
+    <span class="err">├──</span> <span class="nt">_includes</span><span class="o">/</span>             <span class="nt">-</span> <span class="nt">partials</span>
+    <span class="err">│</span>   <span class="err">├──</span> <span class="nt">header</span><span class="nc">.html</span>
+    <span class="err">│</span>   <span class="err">└──</span> <span class="nt">footer</span><span class="nc">.html</span>
+    <span class="err">│</span>
+    <span class="err">└──</span> <span class="nt">_site</span><span class="o">/</span>
+        <span class="err">└──</span> <span class="o">...</span>
+    </code></pre></figure>
+
+<p>Разметка</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    
+    <span class="nt">---</span>
+    <span class="nt">layout</span><span class="o">:</span> <span class="nt">post</span>
+    <span class="nt">title</span><span class="o">:</span> <span class="nt">Hello</span>
+    <span class="nt">---</span>
+    
+    </code></pre></figure>
+
+<p>Дополнительная разметка</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    
+    <span class="nt">permalink</span><span class="o">:</span> <span class="s1">&#39;/hello&#39;</span>
+    <span class="nt">published</span><span class="o">:</span> <span class="nt">false</span>
+    <span class="nt">category</span><span class="o">:</span> <span class="nt">apple</span>
+    <span class="nt">categories</span><span class="o">:</span> <span class="o">[</span><span class="s1">&#39;html&#39;</span><span class="o">,</span> <span class="s1">&#39;css&#39;</span><span class="o">]</span>
+    <span class="nt">tags</span><span class="o">:</span> <span class="o">[</span><span class="s1">&#39;html&#39;</span><span class="o">,</span> <span class="s1">&#39;css&#39;</span><span class="o">]</span>
+    
+    </code></pre></figure>
+
+<p>Конфигурация</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    
+    <span class="nt">source</span><span class="o">:</span> <span class="o">.</span>
+    <span class="nt">destination</span><span class="o">:</span> <span class="nt">_site</span>
+    <span class="nt">exclude</span><span class="o">:</span> <span class="o">[</span><span class="nt">dir</span><span class="o">,</span> <span class="nt">file</span><span class="o">,</span> <span class="o">...]</span>
+    <span class="nt">include</span><span class="o">:</span> <span class="o">[</span><span class="s1">&#39;.htaccess&#39;</span><span class="o">]</span>
+    
+    </code></pre></figure>
+
+<p>Variables</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    
+    
+    <span class="p">{</span><span class="err">{</span> <span class="n">site</span> <span class="p">}</span><span class="err">}</span>       <span class="nt">-</span> <span class="nt">from</span> <span class="nt">config</span><span class="nc">.yml</span>
+    <span class="p">{</span><span class="err">{</span> <span class="k">page</span> <span class="p">}</span><span class="err">}</span>       <span class="nt">-</span> <span class="nt">from</span> <span class="nt">frontmatter</span><span class="o">,</span> <span class="nt">and</span> <span class="nt">page-specific</span> <span class="nt">info</span>
+    <span class="p">{</span><span class="err">{</span> <span class="k">content</span> <span class="p">}</span><span class="err">}</span>    <span class="nt">-</span> <span class="nt">html</span> <span class="nt">content</span> <span class="o">(</span><span class="nt">use</span> <span class="nt">in</span> <span class="nt">layouts</span><span class="o">)</span>
+    <span class="p">{</span><span class="err">{</span> <span class="n">paginator</span> <span class="p">}</span><span class="err">}</span>  <span class="nt">-</span> <span class="o">...</span>
+    
+    </code></pre></figure>
+
+<p>Сайт</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    
+    <span class="p">{</span><span class="err">{</span> <span class="n">site</span><span class="o">.</span><span class="n">time</span> <span class="p">}</span><span class="err">}</span>                 <span class="nt">-</span> <span class="nt">current</span> <span class="nt">time</span>
+    <span class="p">{</span><span class="err">{</span> <span class="n">site</span><span class="o">.</span><span class="n">pages</span> <span class="p">}</span><span class="err">}</span>                <span class="nt">-</span> <span class="nt">list</span> <span class="nt">of</span> <span class="nt">pages</span>
+    <span class="p">{</span><span class="err">{</span> <span class="n">site</span><span class="o">.</span><span class="n">posts</span> <span class="p">}</span><span class="err">}</span>                <span class="nt">-</span> <span class="nt">list</span> <span class="nt">of</span> <span class="nt">posts</span>
+    <span class="p">{</span><span class="err">{</span> <span class="n">site</span><span class="o">.</span><span class="n">related_posts</span> <span class="p">}</span><span class="err">}</span>        <span class="nt">-</span> <span class="nt">list</span>
+    <span class="p">{</span><span class="err">{</span> <span class="n">site</span><span class="o">.</span><span class="n">categories</span><span class="o">.</span><span class="n">CATEGORY</span> <span class="p">}</span><span class="err">}</span>  <span class="nt">-</span> <span class="nt">list</span>
+    <span class="p">{</span><span class="err">{</span> <span class="n">site</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">TAG</span> <span class="p">}</span><span class="err">}</span>             <span class="nt">-</span> <span class="nt">list</span>
+    <span class="p">{</span><span class="err">{</span> <span class="n">site</span><span class="o">.</span><span class="n">static_files</span> <span class="p">}</span><span class="err">}</span>
+    
+    </code></pre></figure>
+
+<p>Страница</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    
+    
+    <span class="p">{</span><span class="err">{</span> <span class="k">page</span><span class="o">.</span><span class="k">content</span> <span class="p">}</span><span class="err">}</span>  <span class="nt">-</span> <span class="nt">un-rendered</span> <span class="nt">content</span>
+    <span class="p">{</span><span class="err">{</span> <span class="k">page</span><span class="o">.</span><span class="n">title</span> <span class="p">}</span><span class="err">}</span>
+    <span class="p">{</span><span class="err">{</span> <span class="k">page</span><span class="o">.</span><span class="n">excerpt</span> <span class="p">}</span><span class="err">}</span>  <span class="nt">-</span> <span class="nt">un-rendered</span> <span class="nt">excerpt</span>
+    <span class="p">{</span><span class="err">{</span> <span class="k">page</span><span class="o">.</span><span class="k">url</span> <span class="p">}</span><span class="err">}</span>
+    <span class="p">{</span><span class="err">{</span> <span class="k">page</span><span class="o">.</span><span class="n">date</span> <span class="p">}</span><span class="err">}</span>
+    <span class="p">{</span><span class="err">{</span> <span class="k">page</span><span class="o">.</span><span class="n">id</span> <span class="p">}</span><span class="err">}</span>       <span class="nt">-</span> <span class="nt">unique</span> <span class="nt">id</span> <span class="nt">for</span> <span class="nt">RSS</span> <span class="nt">feeds</span>
+    <span class="p">{</span><span class="err">{</span> <span class="k">page</span><span class="o">.</span><span class="n">categories</span> <span class="p">}</span><span class="err">}</span>
+    <span class="p">{</span><span class="err">{</span> <span class="k">page</span><span class="o">.</span><span class="n">tags</span> <span class="p">}</span><span class="err">}</span>
+    <span class="p">{</span><span class="err">{</span> <span class="k">page</span><span class="o">.</span><span class="n">path</span> <span class="p">}</span><span class="err">}</span>
+    <span class="p">{</span><span class="err">{</span> <span class="n">post</span><span class="o">.</span><span class="n">excerpt</span> <span class="o">|</span> <span class="n">remove</span><span class="o">:</span> <span class="s1">&#39;&lt;p&gt;&#39;</span> <span class="o">|</span> <span class="n">remove</span><span class="o">:</span> <span class="s1">&#39;&lt;/p&gt;&#39;</span> <span class="p">}</span><span class="err">}</span>
+    <span class="p">{</span><span class="err">{</span> <span class="n">post</span><span class="o">.</span><span class="n">excerpt</span> <span class="o">|</span> <span class="n">strip_html</span> <span class="p">}</span><span class="err">}</span>
+    <span class="o">&lt;!</span><span class="nt">--</span> <span class="nt">blog</span> <span class="nt">pagination</span><span class="o">:</span> <span class="nt">--</span><span class="o">&gt;</span>
+    <span class="p">{</span><span class="err">{</span> <span class="k">page</span><span class="o">.</span><span class="n">next</span> <span class="p">}</span><span class="err">}</span>
+    <span class="p">{</span><span class="err">{</span> <span class="k">page</span><span class="o">.</span><span class="n">previous</span> <span class="p">}</span><span class="err">}</span>
+    
+    </code></pre></figure>
+
+<p>Пагинация</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    
+    
+    <span class="p">{</span><span class="err">{</span> <span class="n">paginator</span><span class="o">.</span><span class="k">page</span> <span class="p">}</span><span class="err">}</span>         <span class="nt">-</span> <span class="nt">page</span> <span class="nt">number</span>
+    <span class="p">{</span><span class="err">{</span> <span class="n">paginator</span><span class="o">.</span><span class="n">total_posts</span> <span class="p">}</span><span class="err">}</span>
+    <span class="p">{</span><span class="err">{</span> <span class="n">paginator</span><span class="o">.</span><span class="n">total_pages</span> <span class="p">}</span><span class="err">}</span>
+    <span class="p">{</span><span class="err">{</span> <span class="n">paginator</span><span class="o">.</span><span class="n">per_page</span> <span class="p">}</span><span class="err">}</span>
+
+
+    <span class="p">{</span><span class="o">%</span> <span class="n">for</span> <span class="n">post</span> <span class="n">in</span> <span class="n">paginator</span><span class="o">.</span><span class="n">posts</span> <span class="o">%</span><span class="p">}</span> <span class="o">...</span> <span class="p">{</span><span class="o">%</span> <span class="n">endfor</span> <span class="o">%</span><span class="p">}</span>
+    
+    <span class="p">{</span><span class="o">%</span> <span class="n">if</span> <span class="n">paginator</span><span class="o">.</span><span class="n">previous_page</span> <span class="o">%</span><span class="p">}</span>
+      <span class="o">&lt;</span><span class="nt">a</span> <span class="nt">href</span><span class="o">=</span><span class="s2">&quot;{{ paginator.previous_page_path }}&quot;</span><span class="o">&gt;</span><span class="nt">Previous</span><span class="o">&lt;/</span><span class="nt">a</span><span class="o">&gt;</span>
+    <span class="p">{</span><span class="o">%</span> <span class="n">else</span> <span class="o">%</span><span class="p">}</span>
+    <span class="p">{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">}</span>
+
+    <span class="p">{</span><span class="err">{</span> <span class="n">paginator</span><span class="o">.</span><span class="n">next_page</span> <span class="p">}</span><span class="err">}</span>     <span class="nt">-</span> <span class="nt">page</span> <span class="nt">number</span>
+    <span class="p">{</span><span class="err">{</span> <span class="n">paginator</span><span class="o">.</span><span class="n">next_page_path</span> <span class="p">}</span><span class="err">}</span>
+    <span class="o">...</span>
+    
+    <span class="p">{</span><span class="o">%</span> <span class="n">if</span> <span class="n">paginator</span><span class="o">.</span><span class="n">total_pages</span> <span class="o">&gt;</span> <span class="m">1</span> <span class="o">%</span><span class="p">}</span>
+    <span class="p">{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">}</span>
+    
+    <span class="err">Добавить</span> <span class="err">в</span> <span class="nt">_config</span><span class="nc">.yml</span><span class="o">:</span>
+    
+    <span class="nt">paginate</span><span class="o">:</span> <span class="nt">5</span>
+    <span class="nt">paginate_path</span><span class="o">:</span> <span class="s2">&quot;blog/:num&quot;</span>
+    
+    </code></pre></figure>
+
+<p>Код</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    <span class="k">def</span> <span class="nf">show</span>
+    <span class="o">.</span><span class="n">.</span><span class="o">.</span>
+    <span class="k">end</span></code></pre></figure>
+
+<p>For</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">{</span><span class="o">%</span> <span class="k">for</span> <span class="n">post</span> <span class="k">in</span> <span class="n">site</span><span class="o">.</span><span class="n">posts</span> <span class="sx">%}</span>
+<span class="sx">&lt;a href=&quot;{{ post.url }</span><span class="p">}</span><span class="s2">&quot;&gt;</span>
+<span class="s2">&lt;h2&gt;</span>
+<span class="s2">    {{ post.title }} &amp;mdash; {{ post.date | date_to_string }}</span>
+<span class="s2">&lt;/h2&gt;</span>
+<span class="s2">&lt;/a&gt;</span>
+<span class="s2">{{ post.content }}</span>
+<span class="s2">{% endfor %}</span></code></pre></figure>
+
+<p>Дата</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    
+    <span class="p">{</span><span class="err">{</span> <span class="k">page</span><span class="o">.</span><span class="n">date</span> <span class="o">|</span> <span class="n">date</span><span class="o">:</span> <span class="s2">&quot;%b %d, %Y&quot;</span> <span class="p">}</span><span class="err">}</span>
+    
+    
+    </code></pre></figure>
+
+<p>If</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    
+
+    <span class="p">{</span><span class="o">%</span> <span class="n">if</span> <span class="k">page</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">feature</span> <span class="o">%</span><span class="p">}</span>
+    <span class="p">{</span><span class="o">%</span> <span class="n">else</span> <span class="n">if</span> <span class="n">xyz</span> <span class="o">%</span><span class="p">}</span>
+    <span class="p">{</span><span class="o">%</span> <span class="n">else</span> <span class="o">%</span><span class="p">}</span>
+    <span class="p">{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">}</span>
+    
+    </code></pre></figure>
+
+<p>Includes (partials)</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    
+    <span class="p">{</span><span class="o">%</span> <span class="n">include</span> <span class="n">header</span><span class="o">.</span><span class="n">html</span> <span class="o">%</span><span class="p">}</span>
+    
+    </code></pre></figure>
+
+<p>Блог</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    
+    <span class="nt">_posts</span><span class="o">/</span><span class="nt">YEAR-MONTH-DAY-title</span><span class="nc">.md</span>
+    
+    </code></pre></figure>
+
+<p>Всавка изображения</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    
+    <span class="o">![</span><span class="nt">My</span> <span class="nt">helpful</span> <span class="nt">screenshot</span><span class="o">](</span><span class="p">{</span><span class="err">{</span> <span class="n">site</span><span class="o">.</span><span class="k">url</span> <span class="p">}</span><span class="err">}</span><span class="o">/</span><span class="nt">assets</span><span class="o">/</span><span class="nt">screenshot</span><span class="nc">.jpg</span><span class="o">)</span>
+    
+    </code></pre></figure>
+
+<p>Черновики</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"> 
+    
+    <span class="nt">vi</span> <span class="nt">_drafts</span><span class="o">/</span><span class="nt">a-draft-post</span><span class="nc">.md</span>
+    <span class="nt">jekyll</span> <span class="nt">build</span> <span class="nt">--drafts</span>
+    
+    </code></pre></figure>
+
+<p>Превью</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    
+    <span class="p">{</span><span class="err">{</span> <span class="n">post</span><span class="o">.</span><span class="n">excerpt</span> <span class="o">|</span> <span class="n">remove</span><span class="o">:</span> <span class="s1">&#39;&lt;p&gt;&#39;</span> <span class="o">|</span> <span class="n">remove</span><span class="o">:</span> <span class="s1">&#39;&lt;/p&gt;&#39;</span> <span class="p">}</span><span class="err">}</span>
+    <span class="p">{</span><span class="err">{</span> <span class="n">post</span><span class="o">.</span><span class="n">excerpt</span> <span class="o">|</span> <span class="n">strip_html</span> <span class="p">}</span><span class="err">}</span>
+    
+    </code></pre></figure>
+
+<p>Превью вставка</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    
+        <span class="nt">---</span>
+        <span class="nt">excerpt_separator</span><span class="o">:</span> <span class="o">&lt;!</span><span class="nt">--more--</span><span class="o">&gt;</span>
+        <span class="nt">---</span>
+        <span class="nt">Excerpt</span>
+        <span class="o">&lt;!</span><span class="nt">--more--</span><span class="o">&gt;</span>
+        <span class="nt">Out-of-excerpt</span>
+    
+    </code></pre></figure>
+
+<p>Пермалинк</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    
+    <span class="err">#</span> <span class="nt">_config</span><span class="nc">.yml</span>
+    <span class="nt">permalink</span><span class="o">:</span> <span class="nt">date</span>   <span class="err">#</span> <span class="o">/</span><span class="nd">:categories</span><span class="o">/</span><span class="nd">:year</span><span class="o">/</span><span class="nd">:month</span><span class="o">/</span><span class="nd">:day</span><span class="o">/</span><span class="nd">:title</span><span class="nc">.html</span>
+    <span class="nt">permalink</span><span class="o">:</span> <span class="nt">pretty</span> <span class="err">#</span> <span class="o">/</span><span class="nd">:categories</span><span class="o">/</span><span class="nd">:year</span><span class="o">/</span><span class="nd">:month</span><span class="o">/</span><span class="nd">:day</span><span class="o">/</span><span class="nd">:title</span><span class="o">/</span>
+    <span class="nt">permalink</span><span class="o">:</span> <span class="nt">none</span>   <span class="err">#</span> <span class="o">/</span><span class="nd">:categories</span><span class="o">/</span><span class="nd">:title</span><span class="nc">.html</span>
+    <span class="nt">permalink</span><span class="o">:</span> <span class="s2">&quot;/:title&quot;</span>
+    
+    </code></pre></figure>
+
+<p>Дата</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    
+    <span class="nt">_data</span><span class="o">/</span><span class="nt">members</span><span class="nc">.yml</span>
+    <span class="p">{</span><span class="o">%</span> <span class="n">for</span> <span class="n">member</span> <span class="n">in</span> <span class="n">site</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">members</span> <span class="o">%</span><span class="p">}</span>
+    
+    </code></pre></figure>
+
+<p>Коллекции</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    
+    <span class="err">#</span> <span class="nt">_config</span><span class="nc">.yml</span>
+    <span class="nt">collections</span><span class="o">:</span>
+      <span class="o">+</span> <span class="nt">authors</span>
+    <span class="err">#</span> <span class="nt">_</span><span class="o">/</span><span class="nt">authors</span><span class="o">/</span><span class="nt">a-n-roquelaire</span><span class="nc">.md</span>
+    <span class="nt">---</span>
+    <span class="nt">name</span><span class="o">:</span> <span class="nt">A</span><span class="o">.</span> <span class="nt">N</span><span class="o">.</span> <span class="nt">Roquelaire</span>
+    <span class="nt">real_name</span><span class="o">:</span> <span class="nt">Anne</span> <span class="nt">Rice</span>
+    <span class="nt">---</span>
+    <span class="p">{</span><span class="o">%</span> <span class="n">for</span> <span class="n">author</span> <span class="n">in</span> <span class="n">site</span><span class="o">.</span><span class="n">authors</span> <span class="o">%</span><span class="p">}</span>
+    
+    </code></pre></figure>
+
+<p>Подсказки и фильтры Даты</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    
+     <span class="p">{</span><span class="err">{</span> <span class="n">site</span><span class="o">.</span><span class="n">time</span> <span class="o">|</span> <span class="n">date_to_xmlschema</span> <span class="p">}</span><span class="err">}</span>   <span class="err">#</span><span class="o">=&gt;</span> <span class="nt">2008-11-07T13</span><span class="nd">:07:54-08:00</span>
+     <span class="p">{</span><span class="err">{</span> <span class="n">site</span><span class="o">.</span><span class="n">time</span> <span class="o">|</span> <span class="n">date_to_rfc822</span> <span class="p">}</span><span class="err">}</span>      <span class="err">#</span><span class="o">=&gt;</span> <span class="nt">Mon</span><span class="o">,</span> <span class="nt">07</span> <span class="nt">Nov</span> <span class="nt">2008</span> <span class="nt">13</span><span class="nd">:07:54</span> <span class="nt">-0800</span>
+     <span class="p">{</span><span class="err">{</span> <span class="n">site</span><span class="o">.</span><span class="n">time</span> <span class="o">|</span> <span class="n">date_to_string</span> <span class="p">}</span><span class="err">}</span>      <span class="err">#</span><span class="o">=&gt;</span> <span class="nt">07</span> <span class="nt">Nov</span> <span class="nt">2008</span>
+     <span class="p">{</span><span class="err">{</span> <span class="n">site</span><span class="o">.</span><span class="n">time</span> <span class="o">|</span> <span class="n">date_to_long_string</span> <span class="p">}</span><span class="err">}</span> <span class="err">#</span><span class="o">=&gt;</span> <span class="nt">07</span> <span class="nt">November</span> <span class="nt">2008</span>
+     <span class="o">|</span> <span class="nt">date</span><span class="o">:</span> <span class="s2">&quot;%Y %m %d&quot;</span>
+     
+     </code></pre></figure>
+
+<p>Процессы</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    
+     <span class="o">|</span> <span class="nt">textilize</span>
+     <span class="o">|</span> <span class="nt">markdownify</span>
+     <span class="o">|</span> <span class="nt">jsonify</span>
+     <span class="o">|</span> <span class="nt">sassify</span>
+     <span class="o">|</span> <span class="nt">scssify</span>
+     
+     </code></pre></figure>
+
+<p>Массивы</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    
+     <span class="nt">site</span><span class="nc">.posts</span> <span class="o">|</span> <span class="nt">where</span><span class="o">:</span><span class="s2">&quot;year&quot;</span><span class="o">,</span><span class="s2">&quot;2014&quot;</span>
+     <span class="nt">site</span><span class="nc">.posts</span> <span class="o">|</span> <span class="nt">group_by</span><span class="o">:</span><span class="s2">&quot;genre&quot;</span>   <span class="err">#</span><span class="o">=&gt;</span> <span class="p">{</span> <span class="n">name</span><span class="o">,</span> <span class="n">items</span> <span class="p">}</span>
+     <span class="nt">site</span><span class="nc">.posts</span> <span class="o">|</span> <span class="nt">sort</span>
+     <span class="o">|</span> <span class="nt">first</span>
+     <span class="o">|</span> <span class="nt">last</span>
+     <span class="o">|</span> <span class="nt">join</span><span class="o">:</span> <span class="s2">&quot;,&quot;</span>
+     <span class="o">|</span> <span class="nt">array_to_sentence_string</span>   <span class="err">#</span><span class="o">=&gt;</span> <span class="nt">CSS</span><span class="o">,</span> <span class="nt">JavaScript</span> <span class="nt">and</span> <span class="nt">HTML</span>
+     <span class="o">|</span> <span class="nt">map</span><span class="o">:</span> <span class="s2">&quot;post&quot;</span>   <span class="err">#</span> <span class="nt">works</span> <span class="nt">like</span> <span class="s1">&#39;pluck&#39;</span>
+     <span class="o">|</span> <span class="nt">size</span>
+     </code></pre></figure>
+
+<p>Строки</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    
+     <span class="o">|</span> <span class="nt">default</span><span class="o">:</span> <span class="s2">&quot;xxx&quot;</span>
+     <span class="o">|</span> <span class="nt">upcase</span>
+     <span class="o">|</span> <span class="nt">downcase</span>
+
+     <span class="o">|</span> <span class="nt">remove</span><span class="o">:</span> <span class="s2">&quot;&lt;p&gt;&quot;</span>
+     <span class="o">|</span> <span class="nt">replace</span><span class="o">:</span> <span class="s2">&quot;super&quot;</span><span class="o">,</span> <span class="s2">&quot;mega&quot;</span>
+     <span class="o">|</span> <span class="nt">remove_first</span><span class="o">:</span> <span class="s2">&quot;&lt;p&gt;&quot;</span>
+     <span class="o">|</span> <span class="nt">replace_first</span><span class="o">:</span> <span class="s2">&quot;super&quot;</span><span class="o">,</span> <span class="s2">&quot;mega&quot;</span>
+
+     <span class="o">|</span> <span class="nt">truncate</span><span class="o">:</span> <span class="nt">5</span>
+     <span class="o">|</span> <span class="nt">truncatewords</span><span class="o">:</span> <span class="nt">20</span>
+
+     <span class="o">|</span> <span class="nt">prepend</span><span class="o">:</span> <span class="s2">&quot;Mr. &quot;</span>
+     <span class="o">|</span> <span class="nt">append</span><span class="o">:</span> <span class="s2">&quot; Sr.&quot;</span>
+
+     <span class="o">|</span> <span class="nt">camelize</span>
+     <span class="o">|</span> <span class="nt">capitalize</span>
+     <span class="o">|</span> <span class="nt">pluralize</span>
+     <span class="o">|</span> <span class="nt">strip_html</span>
+     <span class="o">|</span> <span class="nt">strip_newlines</span>
+     <span class="o">|</span> <span class="nt">newline_to_br</span>
+
+     <span class="o">|</span> <span class="nt">split</span><span class="o">:</span> <span class="s1">&#39;,&#39;</span>
+
+     <span class="o">|</span> <span class="nt">escape</span>
+     <span class="o">|</span> <span class="nt">escape_once</span>
+
+     <span class="o">|</span> <span class="nt">slice</span><span class="o">:</span> <span class="nt">-3</span><span class="o">,</span> <span class="nt">3</span>
+     
+     </code></pre></figure>
+
+<p>Строковые фильтры только для Jekkyl</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    
+     <span class="o">|</span> <span class="nt">number_of_words</span>
+     <span class="o">|</span> <span class="nt">slugify</span>
+
+     <span class="o">|</span> <span class="nt">xml_escape</span>    <span class="err">#</span><span class="o">=&gt;</span> <span class="nt">CDATA</span>
+     <span class="o">|</span> <span class="nt">cgi_escape</span>    <span class="err">#</span><span class="o">=&gt;</span> <span class="nt">foo</span><span class="o">%</span><span class="nt">2Cbar</span>
+     <span class="o">|</span> <span class="nt">uri_escape</span>    <span class="err">#</span><span class="o">=&gt;</span> <span class="nt">foo</span><span class="o">,%</span><span class="nt">20bar</span>
+     
+     </code></pre></figure>
+
+<p>Числа</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    
+     <span class="o">|</span> <span class="nt">minus</span><span class="o">:</span> <span class="nt">2</span>
+     <span class="o">|</span> <span class="nt">plus</span><span class="o">:</span> <span class="nt">1</span>
+     <span class="o">|</span> <span class="nt">time</span><span class="o">:</span> <span class="nt">4</span>
+     <span class="o">|</span> <span class="nt">divided_by</span><span class="o">:</span> <span class="nt">3</span>
+     <span class="o">|</span> <span class="nt">modulo</span><span class="o">:</span> <span class="nt">2</span>
+     
+     </code></pre></figure>
+
+<p>Комментарии</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">    
+    <span class="p">{</span><span class="o">%</span> <span class="n">comment</span> <span class="o">%</span><span class="p">}</span>
+    <span class="p">{</span><span class="o">%</span> <span class="n">endcomment</span> <span class="o">%</span><span class="p">}</span>
+    
+    </code></pre></figure>
+
+<p>Встроить
+Bundler</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    
+    <span class="c1"># _plugins/bundler.rb</span>
+    <span class="nb">require</span> <span class="s2">&quot;bunder/setup&quot;</span>
+    <span class="no">Bundler</span><span class="o">.</span><span class="n">require</span> <span class="ss">:default</span>
+    
+    </code></pre></figure>
+
+<p>Compass</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">       
+    <span class="nt">Compass</span>
+    <span class="nt">Asset</span> <span class="nt">pipeline</span>
+    
+    </code></pre></figure>
+
+<p>Ссылки на рессурсы</p>
+
+<ul>
+  <li><a href="http://jekyllrb.com/docs/home/">http://jekyllrb.com/docs/home/</a></li>
+  <li><a href="http://jekyllrb.com/docs/templates/">http://jekyllrb.com/docs/templates/</a></li>
+  <li><a href="http://docs.shopify.com/themes/liquid-basics/output">http://docs.shopify.com/themes/liquid-basics/output</a></li>
+  <li><a href="http://docs.shopify.com/themes/liquid-basics/logic">http://docs.shopify.com/themes/liquid-basics/logic</a></li>
+  <li><a href="https://github.com/Shopify/liquid/wiki/Liquid-for-Designers">https://github.com/Shopify/liquid/wiki/Liquid-for-Designers</a></li>
+  <li><a href="http://docs.shopify.com/themes/liquid-documentation/filters">http://docs.shopify.com/themes/liquid-documentation/filters</a></li>
+</ul>
+
+
+
+                 </div>
+
+
+
+
+
+  </div>
+
+                <div class="row meta-social">
+
+                  <div class="six columns">
+                    <ul class="gallery-info-property">
+                      <li class="gallery-info-property-li">
+                        <div class="gallery-info-property-item gallery-info-property-tit date">дата</div>
+                        <div class="gallery-info-property-item gallery-info-property-con"> 14 09 2015 </div>
+                      </li>
+                      <li class="gallery-info-property-li">
+                        <div class="gallery-info-property-item gallery-info-property-tit author">автор</div>
+                        <div class="gallery-info-property-item gallery-info-property-con">Andrey Amelin</div>
+                      </li>
+                    </ul>
+
+                  </div>
+                  <div class="six columns">
+                    <!--Social network share icon-->
+                    <div class="social-share clearfix ">
+                        <div class="social-share-buttons ">
+                          <button onclick="window.open('http://www.facebook.com/sharer.php?s=100&p[title]=Большая шпаргалка для Jekyll.  &amp;p[summary]=Полное описание установки, настройки и использования Jekyll&amp;p[url]=/jekyll/2015/09/jekyll.html&amp;p[images][0]=| append: "_m.jpg "', 'facebookShare', 'width=626,height=436'); return false;" title="Большая шпаргалка для Jekyll. " class="social-share-facebook social-share-button"><span class="fa fa-facebook"></span> Share</button>
+                          <button onclick="window.open('http://twitter.com/share?text=Большая шпаргалка для Jekyll.  ;url=/jekyll/2015/09/jekyll.html', 'twitterShare', 'width=626,height=436'); return false;" title="Большая шпаргалка для Jekyll. " class="social-share-twitter social-share-button"><span class="fa fa-twitter"></span> Tweet</button>
+                          <button onclick="window.open('https://plusone.google.com/_/+1/confirm?hl=ru-RU&amp;url=/jekyll/2015/09/jekyll.html', 'googleShare', 'width=626,height=436'); return false;" title="Большая шпаргалка для Jekyll. " target="_blank" class="social-share-google-plus social-share-button"><span class="fa fa-google-plus"></span> Share</button>
+                          <button onclick="window.open('https://vk.com/share.php?url=/jekyll/2015/09/jekyll.html&amp;media=| append: "_m.jpg "&amp;text=Большая шпаргалка для Jekyll. , 'VK.Share', 'width=750,height=350'); return false;" title="Большая шпаргалка для Jekyll. " class="social-share-vk social-share-button"><span class="fa fa-vk"></span> Share</button>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+
+                <!--Post navigation-->
+ <div class="container">
+  <div class="row">
+    
+
+        
+            <a href="/jekyll/2015/08/flickr-and-jekyll.html" class="post-navi-a post-navi-a-pre six columns"><div class="post-navi-a-inn"><span class="post-navi-front"><i class="fa fa-long-arrow-left"></i> БЛИЗКО</span><span class="post-navi-back">Как добавить изображение из Flickr в блог Jekyll</span></div></a>
+            <a href="/2015/09/test.html" class="post-navi-a post-navi-a-pre six columns"><div class="post-navi-a-inn"><span class="post-navi-front">ДАЛЕКО <i class="fa fa-long-arrow-right"></i></span><span class="post-navi-back">test</span></div></a>
+        
+
+  </div>
+</div>
+
+
+
+</div>
+            
+
+
+</article>
+
+    
+<footer>
+      <div class="container">
+        <div class="row footer-stuff">
+              <div class="columns six">
+              <a href="index.html" class="logo-1">DROBO<span class="high-light">SHOK</span></a>
+                <ol class="social">
+                  <li><a title="Twitter" href="https://www.twitter.com/droboshok" target="_blank"><i class="fa fa-twitter"></i>Twitter</a></li>
+                  <li><a title="Facebook" href="https://www.facebook.com/droboshok" target="_blank"><i class="fa fa-facebook "></i>Facebook</a></li>
+                  <li><a title="Instagram" href="https://instagram.com/droboshok" target="_blank"><i class="fa fa-instagram"></i>Instagram</a></li>
+                  <li><a title="Github" href="https://github.com/droboshok/" target="_blank"><i class="fa fa-github-alt"></i>Github</a></li>
+
+                </ol>
+              </div>
+      
+              <div class="columns six">
+              <p><h5>Подпишись</h5> на новости Droboshok.<br>Будь в курсе всех изменений в моем блоге</p>
+                <link type="text/css" rel="stylesheet" href="https://cp.unisender.com/v5/template-editor-new/js/lib/datepicker/pikaday.css"/><script type="text/javascript" src="https://cp.unisender.com/v5/template-editor-new/js/lib/moment/moment-with-langs.min.js"></script><script type="text/javascript" src="https://cp.unisender.com/v5/template-editor-new/js/lib/datepicker/pikaday.js"></script><script type="text/javascript" src="https://cp.unisender.com/v5/template-editor-new/js/app/lang/ru.js"></script><script type="text/javascript" src="https://cp.unisender.com/v5/template-editor-new/js/app/preview/form/form-js.js"></script>
+                <form method="POST" action="http://cp.unisender.com/ru/subscribe?hash=5yxccg4j88dqew9t8f9i46j694zq79y4do97317e" name="subscribtion_form" target="_blank" class="row">
+                  <div class="eight columns">
+        
+                    <input class="u-full-width" name="email" value="" type="text" placeholder="Ваш Email">
+                  </div>
+                  <div class="columns four">
+                    <input class="button-email" value="Подписаться" type="submit">
+                  </div>
+    <input name="charset" value="UTF-8" type="hidden">
+    <input name="default_list_id" value="5728670" type="hidden">
+    <input name="overwrite" value="2" type="hidden">
+    <input name="is_v5" value="1" type="hidden">
+</form>
+
+
+              </div>
+            </div></div>
+    </footer>  
+
+  
+    
+    
+  <!-- JS
+  ================================================== -->
+<script type="text/javascript" src="/assets/js/jquery-2.1.3.min.js"></script>
+  
+
+</body>
+</html>
+

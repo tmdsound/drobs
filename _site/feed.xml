@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Droboshok</title>
+    <description>Thoughts, stories and ideas.</description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 24 Sep 2015 00:40:23 +0300</pubDate>
+    <lastBuildDate>Thu, 24 Sep 2015 00:40:23 +0300</lastBuildDate>
+    <generator>Jekyll v3.0.0.pre.beta8</generator>
+    
+      <item>
+        <title>test</title>
+        <description>
+</description>
+        <pubDate>Thu, 24 Sep 2015 00:00:00 +0300</pubDate>
+        <link>/2015/09/test.html</link>
+        <guid isPermaLink="true">/2015/09/test.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Большая шпаргалка для Jekyll. </title>
+        <description>&lt;p&gt;Наиболее чосто используемые фильтры и команды Jekyll. Их описание установки, настройки и использования.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;jekyll&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Структура&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;    &lt;span class=&quot;o&quot;&gt;./&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;├──&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;_config&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.yml&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;│&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;├──&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;_data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;│&lt;/span&gt;   &lt;span class=&quot;err&quot;&gt;└──&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;│&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;├──&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;_drafts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;│&lt;/span&gt;   &lt;span class=&quot;err&quot;&gt;└──&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;│&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;├──&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;_posts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;│&lt;/span&gt;   &lt;span class=&quot;err&quot;&gt;└──&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;2014-01-01-hello&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.md&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;│&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;├──&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;_layouts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;│&lt;/span&gt;   &lt;span class=&quot;err&quot;&gt;├──&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.html&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;│&lt;/span&gt;   &lt;span class=&quot;err&quot;&gt;└──&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.html&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;│&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;├──&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;_includes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;             &lt;span class=&quot;nt&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;partials&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;│&lt;/span&gt;   &lt;span class=&quot;err&quot;&gt;├──&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.html&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;│&lt;/span&gt;   &lt;span class=&quot;err&quot;&gt;└──&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;footer&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.html&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;│&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;└──&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;_site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
+        &lt;span class=&quot;err&quot;&gt;└──&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+    &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Разметка&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;    
+    &lt;span class=&quot;nt&quot;&gt;---&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;post&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;Hello&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;---&lt;/span&gt;
+    
+    &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Дополнительная разметка&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;    
+    &lt;span class=&quot;nt&quot;&gt;permalink&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/hello&amp;#39;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;published&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;false&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;category&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;apple&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;categories&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;html&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;css&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;tags&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;html&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;css&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+    
+    &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Конфигурация&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;    
+    &lt;span class=&quot;nt&quot;&gt;source&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;destination&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;_site&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;exclude&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...]&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;include&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;.htaccess&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+    
+    &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Variables&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;    
+    
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.yml&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;page&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;frontmatter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;page-specific&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;info&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;content&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;    &lt;span class=&quot;nt&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;content&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;use&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;layouts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;paginator&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;  &lt;span class=&quot;nt&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+    
+    &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Сайт&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;    
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;                 &lt;span class=&quot;nt&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;current&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;time&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pages&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;                &lt;span class=&quot;nt&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;pages&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;posts&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;                &lt;span class=&quot;nt&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;posts&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;related_posts&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;        &lt;span class=&quot;nt&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;list&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;categories&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CATEGORY&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;  &lt;span class=&quot;nt&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;list&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tags&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TAG&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;             &lt;span class=&quot;nt&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;list&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;static_files&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+    
+    &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Страница&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;    
+    
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;content&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;  &lt;span class=&quot;nt&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;un-rendered&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;content&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;excerpt&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;  &lt;span class=&quot;nt&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;un-rendered&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;excerpt&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;       &lt;span class=&quot;nt&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;unique&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;RSS&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;feeds&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;categories&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tags&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;excerpt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;lt;p&amp;gt;&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;lt;/p&amp;gt;&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;excerpt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;strip_html&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;!&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;blog&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;pagination&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;previous&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+    
+    &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Пагинация&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;    
+    
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;paginator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;page&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;         &lt;span class=&quot;nt&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;page&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;number&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;paginator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;total_posts&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;paginator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;total_pages&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;paginator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;per_page&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+
+
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;paginator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;posts&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endfor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;paginator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;previous_page&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;{{ paginator.previous_page_path }}&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;Previous&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endif&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;paginator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next_page&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;     &lt;span class=&quot;nt&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;page&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;number&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;paginator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;next_page_path&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+    
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;paginator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;total_pages&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endif&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    
+    &lt;span class=&quot;err&quot;&gt;Добавить&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;в&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;_config&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.yml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+    
+    &lt;span class=&quot;nt&quot;&gt;paginate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;5&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;paginate_path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;blog/:num&amp;quot;&lt;/span&gt;
+    
+    &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Код&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;show&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;For&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;posts&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%}&lt;/span&gt;
+&lt;span class=&quot;sx&quot;&gt;&amp;lt;a href=&amp;quot;{{ post.url }&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;&amp;lt;h2&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;    {{ post.title }} &amp;amp;mdash; {{ post.date | date_to_string }}&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;{{ post.content }}&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;{% endfor %}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Дата&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;    
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;%b %d, %Y&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+    
+    
+    &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;If&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;    
+
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;feature&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xyz&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endif&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    
+    &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Includes (partials)&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;    
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    
+    &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Блог&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;    
+    &lt;span class=&quot;nt&quot;&gt;_posts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;YEAR-MONTH-DAY-title&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.md&lt;/span&gt;
+    
+    &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Всавка изображения&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;    
+    &lt;span class=&quot;o&quot;&gt;![&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;My&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;helpful&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;screenshot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;assets&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;screenshot&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.jpg&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    
+    &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Черновики&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt; 
+    
+    &lt;span class=&quot;nt&quot;&gt;vi&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;_drafts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;a-draft-post&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.md&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;jekyll&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;build&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--drafts&lt;/span&gt;
+    
+    &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Превью&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;    
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;excerpt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;lt;p&amp;gt;&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;lt;/p&amp;gt;&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;excerpt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;strip_html&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;
+    
+    &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Превью вставка&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;    
+        &lt;span class=&quot;nt&quot;&gt;---&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;excerpt_separator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;!&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--more--&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;---&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;Excerpt&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;!&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--more--&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;Out-of-excerpt&lt;/span&gt;
+    
+    &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Пермалинк&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;    
+    &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;_config&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.yml&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;permalink&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;date&lt;/span&gt;   &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:categories&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:year&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:month&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:day&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:title&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.html&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;permalink&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;pretty&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:categories&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:year&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:month&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:day&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;permalink&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;none&lt;/span&gt;   &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:categories&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:title&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.html&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;permalink&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;/:title&amp;quot;&lt;/span&gt;
+    
+    &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Дата&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;    
+    &lt;span class=&quot;nt&quot;&gt;_data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;members&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.yml&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;member&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;members&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    
+    &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Коллекции&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;    
+    &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;_config&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.yml&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;collections&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;authors&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;authors&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;a-n-roquelaire&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.md&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;---&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;N&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;Roquelaire&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;real_name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;Anne&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;Rice&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;---&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;author&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;authors&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    
+    &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Подсказки и фильтры Даты&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;    
+     &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;date_to_xmlschema&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;   &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;2008-11-07T13&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:07:54-08:00&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;date_to_rfc822&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;      &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;Mon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;07&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;Nov&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;2008&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:07:54&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-0800&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;date_to_string&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;      &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;07&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;Nov&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;2008&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;date_to_long_string&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;07&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;November&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;2008&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;%Y %m %d&amp;quot;&lt;/span&gt;
+     
+     &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Процессы&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;    
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;textilize&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;markdownify&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;jsonify&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;sassify&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;scssify&lt;/span&gt;
+     
+     &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Массивы&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;    
+     &lt;span class=&quot;nt&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.posts&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;year&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;2014&amp;quot;&lt;/span&gt;
+     &lt;span class=&quot;nt&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.posts&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;group_by&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;genre&amp;quot;&lt;/span&gt;   &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;items&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+     &lt;span class=&quot;nt&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.posts&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;sort&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;first&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;last&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;,&amp;quot;&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;array_to_sentence_string&lt;/span&gt;   &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;CSS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;JavaScript&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;HTML&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;post&amp;quot;&lt;/span&gt;   &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;works&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;like&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;pluck&amp;#39;&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;size&lt;/span&gt;
+     &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Строки&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;    
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;xxx&amp;quot;&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;upcase&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;downcase&lt;/span&gt;
+
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;lt;p&amp;gt;&amp;quot;&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;super&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;mega&amp;quot;&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;remove_first&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;lt;p&amp;gt;&amp;quot;&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;replace_first&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;super&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;mega&amp;quot;&lt;/span&gt;
+
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;truncate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;5&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;truncatewords&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;20&lt;/span&gt;
+
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;prepend&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Mr. &amp;quot;&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot; Sr.&amp;quot;&lt;/span&gt;
+
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;camelize&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;capitalize&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;pluralize&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;strip_html&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;strip_newlines&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;newline_to_br&lt;/span&gt;
+
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;,&amp;#39;&lt;/span&gt;
+
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;escape&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;escape_once&lt;/span&gt;
+
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;slice&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;3&lt;/span&gt;
+     
+     &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Строковые фильтры только для Jekkyl&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;    
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;number_of_words&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;slugify&lt;/span&gt;
+
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;xml_escape&lt;/span&gt;    &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;CDATA&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;cgi_escape&lt;/span&gt;    &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;2Cbar&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;uri_escape&lt;/span&gt;    &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,%&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;20bar&lt;/span&gt;
+     
+     &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Числа&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;    
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;minus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;2&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;plus&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;1&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;4&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;divided_by&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;3&lt;/span&gt;
+     &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;modulo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;2&lt;/span&gt;
+     
+     &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Комментарии&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;    
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comment&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endcomment&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    
+    &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Встроить
+Bundler&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;    
+    &lt;span class=&quot;c1&quot;&gt;# _plugins/bundler.rb&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;bunder/setup&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;Bundler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:default&lt;/span&gt;
+    
+    &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Compass&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;       
+    &lt;span class=&quot;nt&quot;&gt;Compass&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;Asset&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;pipeline&lt;/span&gt;
+    
+    &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Ссылки на рессурсы&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://jekyllrb.com/docs/home/&quot;&gt;http://jekyllrb.com/docs/home/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://jekyllrb.com/docs/templates/&quot;&gt;http://jekyllrb.com/docs/templates/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://docs.shopify.com/themes/liquid-basics/output&quot;&gt;http://docs.shopify.com/themes/liquid-basics/output&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://docs.shopify.com/themes/liquid-basics/logic&quot;&gt;http://docs.shopify.com/themes/liquid-basics/logic&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/Shopify/liquid/wiki/Liquid-for-Designers&quot;&gt;https://github.com/Shopify/liquid/wiki/Liquid-for-Designers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://docs.shopify.com/themes/liquid-documentation/filters&quot;&gt;http://docs.shopify.com/themes/liquid-documentation/filters&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Mon, 14 Sep 2015 00:00:00 +0300</pubDate>
+        <link>/jekyll/2015/09/jekyll.html</link>
+        <guid isPermaLink="true">/jekyll/2015/09/jekyll.html</guid>
+        
+        <category>jekyll</category>
+        
+        <category>install</category>
+        
+        <category>gem</category>
+        
+        
+        <category>Jekyll</category>
+        
+      </item>
+    
+      <item>
+        <title>Как добавить изображение из Flickr в блог Jekyll</title>
+        <description>&lt;p&gt;Мне понравилась идея когда я могу встроить изображение в свой сайт из популярных фотохостингов.Я решил использовать для этих целей Flickr по многим причинам. Во-первых достаточно большое дисковое пространство - 1 ТбБ во-вторых много пользовательских режимов, в-третьих достаточно предустановленных режимов отображения фото и видео, в-четвертых довольно таки высокая скорость доступа.Для создания своих статических сайтов я использую генератор &lt;a href=&quot;/jekyll/001.html&quot;&gt;Jekyll&lt;/a&gt; и сегодня я расскажу как добавить и настроить плагин для вставки изображений.&lt;/p&gt;
+
+&lt;p&gt;Для начала нам необходимо создать приложение,у кого нет аккаунта в Flickr - идём и &lt;a href=&quot;https://www.flickr.com&quot;&gt;регестрируемся&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Переходим по &lt;a href=&quot;https://www.flickr.com/services/apps/create/&quot;&gt;ссылке&lt;/a&gt;далее жмем  &lt;strong&gt;Request an Api Key,&lt;/strong&gt; здесь нам предлагают выбрать для комерческого ипользования приложения или нет. Выбираем &lt;strong&gt;APPLY FOR NON-COMERCIAL KEY&lt;/strong&gt;
+&lt;img src=&quot;https://farm1.staticflickr.com/588/20995023771_394fa9b393.jpg&quot; width=&quot;500&quot; height=&quot;247&quot; alt=&quot;регестрация на Flickr&quot; title=&quot;регестрация на Flickr&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Вписываем названия нашего приложения и описание, соглашаемся с условиями и нажимаем кнопку “Отправить”
+&lt;img src=&quot;https://farm6.staticflickr.com/5792/20366456493_0d018251b4.jpg&quot; width=&quot;500&quot; height=&quot;247&quot; alt=&quot;api_key on Flickr&quot; title=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Как показано на рисунке нам предоставили 
+api_key и secret
+Для нашего плагина нам понадобится api_key:6cef62fa12e54f74f3770d9d6ef2bec2
+Что еще нам понадобится от Flickr - это photoID изображения.Выбираем изображение которое вы хотите разместить на сайте,в адресной строке браузера видим ссылку типа моей -&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt; &lt;span class=&quot;ss&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;//&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;www&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;flickr&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;photos&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;135036651&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@N08&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20348431344&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dateposted&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;
+ &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;цифры 20348431344 и есть photoID нашего изображения.&lt;/p&gt;
+
+&lt;p&gt;Теперь переходим к нашему сайту. Нам понадобится установленный Jekyll и плагин, исходный код которого можно скачать на &lt;a href=&quot;https://github.com/droboshok/Flickr-Photo-Jekyll&quot;&gt;GitHub&lt;/a&gt;. Добавьте файл плагина &lt;em&gt;main_flickr.rb&lt;/em&gt; в папку _plugins, если такой папки нет - то создайте её.&lt;/p&gt;
+
+&lt;p&gt;Так же нам понадобится внести данные api_key из Flickr в файл _config.yml&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;flickr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt;     &lt;span class=&quot;ss&quot;&gt;api_key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cef62fa12e54f74f3770d9d6ef2bec2&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt;      
+&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt;      &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Создаем новую страницу или редактируем уже существующую. и в место где вы хотите разместить изображение - вставляем код&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main_photo&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20348431344&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;где 20348431344 это photoID нашего изображения
+Размер изображения по умолчанию 500х375
+Если вы хотите установить другой размер, тогда вам необходимо указать его в одинарных кавычках после изображения.Например:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt; 
+ &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main_photo&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20348431344&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Square&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ 
+ &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;выведет изображение 75х75
+Вот список предустановленных размеров:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;‘Square’ = 75x75&lt;/li&gt;
+  &lt;li&gt;‘Large Square’ = 150x150&lt;/li&gt;
+  &lt;li&gt;‘Thumbnail’ = 75x100&lt;/li&gt;
+  &lt;li&gt;‘Small’ = 180x240&lt;/li&gt;
+  &lt;li&gt;‘Small 320’ = 240x320&lt;/li&gt;
+  &lt;li&gt;‘Medium’ = 375x500&lt;/li&gt;
+  &lt;li&gt;‘Medium 640’ = 480x640&lt;/li&gt;
+  &lt;li&gt;‘Medium 800’ = 600x800&lt;/li&gt;
+  &lt;li&gt;‘Large’ = 768x1024&lt;/li&gt;
+  &lt;li&gt;‘Large 1600’ = 1200x1600&lt;/li&gt;
+  &lt;li&gt;‘Original’ = 1200x1600&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;За более подробной информацией можно обратиться к &lt;a href=&quot;https://www.flickr.com/services/api/&quot;&gt;API Documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Отлично, теперь вы сможете размещать свои фото из Flickr на своем сайте.
+Спасибо за внимание! 
+По вопросам редактирования параметров плагина обращайтесь на почту или соц.сети.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 29 Aug 2015 00:00:00 +0300</pubDate>
+        <link>/jekyll/2015/08/flickr-and-jekyll.html</link>
+        <guid isPermaLink="true">/jekyll/2015/08/flickr-and-jekyll.html</guid>
+        
+        <category>jekyll</category>
+        
+        <category>flickr</category>
+        
+        <category>plugin</category>
+        
+        
+        <category>Jekyll</category>
+        
+      </item>
+    
+      <item>
+        <title>Подсветка меню в Jekyll</title>
+        <description>
+&lt;p&gt;Все кто пользуется генератором статических сайтов Jekyll сталкивался с ситуацией когда возникает необходимость выделить название меню той страницы где находится посетитель.&lt;/p&gt;
+
+&lt;p&gt;Я предлагаю воспользоваться следующим способом:&lt;/p&gt;
+
+&lt;p&gt;В качестве примера будем использовать стандартный шаблон Jekyll.Я добавил несколько страниц в меню для наглядности.Теперь наш тестовый сайт выглядит следующим образом&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://res.cloudinary.com/droboshok-github-io/image/upload/c_scale,w_1236/v1420400770/droboshok/links-1.png&quot; alt=&quot;Подсветка меню в Jekyll&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Как Вы видите наше меню состоит из пунктов: Главная, Портфолио, FAQ, О Нас.
+За выделение активной ссылки отвечает class “active”.Пропишем небольшой скрипт который будет вставлять class=”active” в шаблон текущей страницы.Для начала создадим папку ‘ _data ‘ в корневой директории сайта.В этой папке создадим файл ‘ links.yml ‘ и  пропишем в этом файле название рубрик и ссылки на эти рубрики&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;    &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;Главная&lt;/span&gt; 
+      &lt;span class=&quot;ss&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;
+
+    &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;Портфолио&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;foto&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;
+    
+    &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;FAQ&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;faq&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;
+    
+    &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;О&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;Нас&lt;/span&gt;
+      &lt;span class=&quot;ss&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;about&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt; 
+  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Сам скрипт имеет следующий вид&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;  
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;link&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;links&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;      
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;assign&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;active&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nil&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;   
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;contains&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;link&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;assign&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;active&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;active&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endif&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;{ % if forloop.first % }{ % endif % } {{ active }} { % if forloop.last % }{ % endif % }&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;{{ link.url }}&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;link&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endfor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Скрипт делает проверку, если текущая страница есть в списке меню ей подставляется класс “active”&lt;/p&gt;
+
+&lt;p&gt;Теперь нам необходимо отредактировать страницу в которой находится наше меню.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;trigger&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;page-link&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+         &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;active&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+              &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;index.html&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Главная&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+              &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;foto.html&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Портфолио&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+              &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;faq.html&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;FAQ&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+              &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;about.html&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;О&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;нас&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;И заменить на строки&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;trigger&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;page-link&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;    
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;link&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;links&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;assign&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;active&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nil&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;contains&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;link&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;assign&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;active&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;active&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endif&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;{ % if forloop.first % }{ % endif % } {{ active }} { % if forloop.last % }{ % endif % }&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;{{ link.url }}&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;link&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;endfor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;ul&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Теперь когда посетитель перейдет в какойто раздел меню, допустим “Портфолио” ссылка в меню изменит свой стиль. Для примера я использовал красный цвет активной ссылки.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://res.cloudinary.com/droboshok-github-io/image/upload/v1420410716/droboshok/link2.png&quot; alt=&quot;Активная ссылка в меню Jekyll&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ну вот, теперь наш сайт стал более дружелюбным.&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 04 Jan 2015 00:00:00 +0200</pubDate>
+        <link>/jekyll/2015/01/links.html</link>
+        <guid isPermaLink="true">/jekyll/2015/01/links.html</guid>
+        
+        <category>Jekyll</category>
+        
+        <category>Github</category>
+        
+        
+        <category>Jekyll</category>
+        
+      </item>
+    
+      <item>
+        <title>Свой сервис коротких ссылок</title>
+        <description>&lt;p&gt;В последнее время я все чаще стал использовать для своих сторонние сервера для хранения изображений Для чего это надо? - спросите Вы. Ответ очень прост:
+- во первых - это увеличивает место под сайт, 
+- во вторых - меньше нагрузки на хостинг в следствии чего скорость загрузки страниц уменьшается,
+- в третьих - все изображения с ваших сайтов находятся в одном.&lt;/p&gt;
+
+&lt;p&gt;Я использую Google Drive - как из него сделать хостинг написано в статье &lt;a href=&quot;http://droboshok.github.io/web/godrive.html&quot;&gt;“Google Drive - бесплатный хостинг”&lt;/a&gt;.Вы можете выбрать любой другой ресурс  например Dropbox или Yandex. Разместив там изображение вы получаете ссылку длиной в километр.Сегодня я расскажу как самому сделать короткую красивую ссылку.&lt;/p&gt;
+
+&lt;p&gt;И так приступим. Нам понадобится хостинг вашего сайта и небольшой скрипт который можно скачать &lt;a href=&quot;https://github.com/droboshok/url_shortlink&quot;&gt;здесь&lt;/a&gt;
+Переходим в управление хостингом вашего сайта и создаем субдомен, так как мы делаем короткие ссылки то и субдомен у нас будет короткий “u” У меня получилось так &lt;br /&gt;
+&lt;a href=&quot;http://u.montagnik.od.ua&quot;&gt;http://u.montagnik.od.ua&lt;/a&gt; Вы можете использовать любой другой субдомен.&lt;/p&gt;
+
+&lt;p&gt;Теперь с помощью FTP клиента загружаем в папку наш скрипт, распаковываем его. После этого заходим на страницу yoursubdomaine/form.php (у меня это выглядит так - &lt;a href=&quot;http://u.montagnik.od.ua/form.php&quot;&gt;http://u.montagnik.od.ua/form.php&lt;/a&gt; Зап поле где предлагается разместить длинную ссылку -  мы вставляем ссылку полученную на Google Drive, Yandex, Dropbox или другом хранилище В поле с названием вы даете название вашей ссылки, после чего она будет иметь вид yoursubdomaine/ВашеНазвание. Я рекомендую давать логичные названия заканчивающиеся на .jpeg, .png, .gif Например 67.jpeg или 78.png
+&lt;img src=&quot;http://u.montagnik.od.ua/10.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Теперь эту ссылку вы можете вставлять в код страницы или отправлять друзьям в соц.сетях, по почте или в смс&lt;/p&gt;
+</description>
+        <pubDate>Tue, 26 Aug 2014 00:00:00 +0300</pubDate>
+        <link>/web/2014/08/shortlink.html</link>
+        <guid isPermaLink="true">/web/2014/08/shortlink.html</guid>
+        
+        <category>Google</category>
+        
+        <category>Yandex</category>
+        
+        <category>Dropbox</category>
+        
+        
+        <category>web</category>
+        
+      </item>
+    
+      <item>
+        <title>Google Drive - бесплатный хостинг</title>
+        <description>
+&lt;p&gt;Google опять пришел на выручку сайто строителям, на этот раз тем что можно пользоваться 15гб бесплатно. Наверняка многие знают что Google при регистрации на своих сервисах выделяет в пользование 15 гб на личные нужды письма, документы, файлы, фото и видео. Но не многие знают как получить прямую ссылку и пользоваться Drive как хостингом(в нашем примере хостингом изображений). Сегодня я расскажу как это делается.&lt;/p&gt;
+
+&lt;p&gt;Для начала нам нужен аккаунт в сервисах Google, если у вас его нет вам необходимо зарегистрироваться, процедура эта легкая и бесплатная, если есть идем дальше.&lt;/p&gt;
+
+&lt;p&gt;Входим на Google Drive под своей учетной записью и попадаем на страницу управления файлами
+&lt;img src=&quot;https://8bc7b4a24023d95543565908f8f2d66966095474.googledrive.com/host/0B7HxsJz8PULSdlpiMFJ3ZVhhR28/1639.png&quot; alt=&quot;&quot; /&gt;
+1. Создаем папку для наших фото и файлов
+2. Заходим в пункт “свойства” выбираем “Совместный доступ” и открываем доступ всем
+&lt;img src=&quot;https://8bc7b4a24023d95543565908f8f2d66966095474.googledrive.com/host/0B7HxsJz8PULSdlpiMFJ3ZVhhR28/%D0%9C%D0%BE%D0%B9%20%D0%B4%D0%B8%D1%81%D0%BA%20%E2%80%93%20%D0%94%D0%B8%D1%81%D0%BA%20Google_20140826171831.png&quot; alt=&quot;&quot; /&gt;
+Далее нажимаем “еще” в выпадающем списке находим пункт “свойства” и нажимаем его. Справа появляется дополнительное меню по статистике нашей активности нажимаем “описание” и в этом же окне находим ссылку на хостинг -это и есть прямые ссылки на наши изображения
+&lt;img src=&quot;https://8bc7b4a24023d95543565908f8f2d66966095474.googledrive.com/host/0B7HxsJz8PULSdlpiMFJ3ZVhhR28/%D0%9C%D0%BE%D0%B9%20%D0%B4%D0%B8%D1%81%D0%BA%20%E2%80%93%20%D0%94%D0%B8%D1%81%D0%BA%20Google_20140826171919.png&quot; alt=&quot;&quot; /&gt;
+Выбираем изображение которое мы хотим вставить, нажимаем, копируем ссылку из адресной строки браузера, и вставляем в свою статью на сайте или делимся с друзьями.
+Единственное неудобство очень длинная ссылка - но это можно исправить.Можете воспользоваться сервисами коротких ссылок (у Google то же есть такая услуга), или сделать свой персональный сервис коротких ссылок Как это делается я описывал в &lt;a href=&quot;http://droboshok.github.io/web/shortlink.html&quot;&gt;этой&lt;/a&gt; статье.
+С Вами был @droboshok до новых встреч&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 26 Aug 2014 00:00:00 +0300</pubDate>
+        <link>/web/2014/08/godrive.html</link>
+        <guid isPermaLink="true">/web/2014/08/godrive.html</guid>
+        
+        <category>Google</category>
+        
+        <category>Yandex</category>
+        
+        <category>Dropbox</category>
+        
+        <category>Jekyll</category>
+        
+        <category>Github</category>
+        
+        
+        <category>web</category>
+        
+      </item>
+    
+      <item>
+        <title>Вывод анонсов новостей на Главную в Jekyll Bootsrap</title>
+        <description>&lt;p&gt;Совсем недавно мой взгляд упал на Github как на сервис на котором можно размешать сайты Немного почитал литературу установил Ruby, Phyton, Jekyll. Немного повозившись установил все это к себе на Windows, как это все происходит я расскажу в следующих постах). Сегодня речь пойдет о том как вывести анонсы новостей на страницу.
+Длину анонса вы будете устанавливать сами, вставляя в свой пост команду&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;  &lt;span class=&quot;o&quot;&gt;&amp;lt;!&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;more&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;.&lt;/span&gt;
+
+
+ &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Вы установили сайт наполнили его постами и тут обнаруживает что все посты выводятся на одну страницу.Это конечно хорошая информация для поисковых систем но для обычного читателя как то не очень.&lt;/p&gt;
+
+&lt;p&gt;По умолчанию в шаблонах Jekyll Bootstrap не предусмотрена возможность вывода анонсов поэтому мы немного доработаем этот код.Мы будем рассматривать сайт который расположен на локальном компьютере и открывается в браузере по адресу http://localhost:4000 Редактировать мы будем Главную страницу.&lt;/p&gt;
+
+&lt;p&gt;Итак начнем.Переходим в папку где Вы скачали и запустили Ваш Jtkyll Bootstrap и открываем файл index.md Файл отлично открывается Notepad++ хотя для полноценного редактирования лучше использовать markdawn редакторы. находим в файле следующие строки: 
+&lt;img src=&quot;http://res.cloudinary.com/droboshok/image/upload/v1408662093/1_azzwtf.jpg&quot; alt=&quot;&quot; /&gt;
+добавим функцию  post.excerpt  которая будет выводить наш анонс.Функция обнаруживает в тексте нашей статьи команду &lt;!-- more --&gt; и отправляет часть текста на страницу. 
+&lt;img src=&quot;http://res.cloudinary.com/droboshok/image/upload/v1408662093/2_unpvl9.jpg&quot; alt=&quot;&quot; /&gt;
+Вы можете использовать любую другую команду вместо &lt;!-- more --&gt; Так же добавляем количество постов которое мы хотим видеть у себя на странице, в моем случаи это 7, за это отвечает значение limit:
+&lt;img src=&quot;http://res.cloudinary.com/droboshok/image/upload/v1408662093/4_qha1ch.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Для того чтоб Jekyll понял что вы хотите прервать вывод статьи имени в это месте необходимо объявить значение для нашей функции. Для этого переходим в папку с нашим сайтом и открываем файл _config.yml Я 
+&lt;img src=&quot;http://res.cloudinary.com/droboshok/image/upload/v1408662093/3_ecxrsa.jpg&quot; alt=&quot;&quot; /&gt;
+использую Notepad++ и сохраняю файлы с кодировкой UTF-8 без (BOM)&lt;/p&gt;
+
+&lt;p&gt;и прописываем   excerpt_separator: &lt;!-- more --&gt;
+&lt;img src=&quot;http://res.cloudinary.com/droboshok/image/upload/v1408662093/7_loy7ok.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;После этого отправляемся в наш пост вставляем  &lt;!-- more --&gt; 
+&lt;img src=&quot;http://res.cloudinary.com/droboshok/image/upload/v1408662093/5_nyoynu.jpg&quot; alt=&quot;&quot; /&gt;
+Вуа-ля наш анонс готов.При желании можно еще доработать чтобы Jtkell выводил еще и картинки…
+&lt;img src=&quot;http://res.cloudinary.com/droboshok/image/upload/v1408662093/6_ategkw.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Конечно это пост немного ранноват и не имеет своего логического начала, однако этот вопрос был настолько свеж , что хотелось его как можно раньше осветить. Всем спасибо!&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 21 Aug 2014 00:00:00 +0300</pubDate>
+        <link>/jekyll/2014/08/001.html</link>
+        <guid isPermaLink="true">/jekyll/2014/08/001.html</guid>
+        
+        <category>Jekyll</category>
+        
+        <category>github</category>
+        
+        <category>jekyll-bootstrap</category>
+        
+        
+        <category>Jekyll</category>
+        
+      </item>
+    
+  </channel>
+</rss>
