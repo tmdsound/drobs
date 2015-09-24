@@ -11,9 +11,9 @@ author :
   twitter : droboshok
   facebook : droboshok
 
-# basurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/drobs/" # the subpath of your site, e.g. /blog/
  # the base hostname & protocol for your site
-url: http://tmdsound.github.io/drobs
+# url: http://tmdsound.github.io/drobs
 # url: http://droboshok.in.ua
 url: http://localhost:4000
 
