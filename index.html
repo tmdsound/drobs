@@ -16,78 +16,78 @@ layout: default_h
   <div class="u-cf"></div>
 <article> 
 
-{% for post in paginator.posts %}
+    {% for post in paginator.posts %}
 
-<section>  
-  <div class="container">
-    <div class="row">
-      {% if post.image %}
-      <div class="eleven columns blog-img" >
-        <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}"><img alt="{{ post.title }}" src="{{ post.image }}"></a>
-      </div><!-- End Blog-img -->
-      {% endif %}
-    </div><!-- EndRow -->
-    <div class="row">
-      <div class="blog">
-        <div class="one column">
-          <p class="data-big">{{ post.date | date: '%d' }}</p>
-            <p class="data">{{ post.date | date: '%m' }}<br>
-                       {{ post.date | date: '%Y' }}</p>
-        </div><!-- End one columns -->
-        <div class="eleven columns">
-          <h2 >
-            <a title="{{ post.title }}" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-          </h2>
+    <section>  
+      <div class="container">
+        <div class="row">
+          {% if post.image %}
+          <div class="eleven columns blog-img" >
+            <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}"><img alt="{{ post.title }}" src="{{ post.image }}"></a>
+          </div><!-- End Blog-img -->
+          {% endif %}
+        </div><!-- EndRow -->
+        <div class="row">
+          <div class="blog">
+            <div class="one column">
+              <p class="data-big">{{ post.date | date: '%d' }}</p>
+                <p class="data">{% include JB/data-coll %}<br>
+                           {{ post.date | date: '%Y' }}</p>
+            </div><!-- End one columns -->
+            <div class="eleven columns">
+              <h2 >
+                <a title="{{ post.title }}" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+              </h2>
 
-          <div>
-            <span >В <a href="{{ site.url }}/categories.html" rel="category tag" class="high-light">{{ post.category }}</a>  
-            </span>
-            <span >автор</span>  <span class="high-light">{{ site.author.name }}</span>
+              <div>
+                <span >В <a href="{{ site.url }}/categories.html" rel="category tag" class="high-light">{{ post.category }}</a>  
+                </span>
+                <span >автор</span>  <span class="high-light">{{ site.author.name }}</span>
+              </div>
+
+              <div >
+              <p>{{ post.content | strip_html | truncate: 200 }}</p>
+              </div>
+            </div><!-- End eleven columns -->
+          </div><!-- End Blog -->
+        </div><!-- End row -->
+        <hr>
+      </div><!-- container -->
+      
+        <div class="u-cf"></div>
+    </section>
+
+
+
+    {% endfor %}
+
+
+
+    <div class="container">
+      <div class="row">
+      {% if paginator.total_pages > 1 %}
+        <a href="{{ paginator.previous_page_path | replace: '//', '/' }}" class="post-navi-a post-navi-a-pre six columns">
+          <div class="post-navi-a-inn">
+            <span class="post-navi-front"><i class="icon-left"></i> НАЧАЛО</span>
+            <span class="post-navi-back">НАЧАЛО</span>
           </div>
+        </a>
 
-          <div >
-          <p>{{ post.content | strip_html | truncate: 200 }}</p>
+        <a href="{{ paginator.next_page_path | replace: '//', '/' }}" class="post-navi-a post-navi-a-next six columns">
+
+          <div class="post-navi-a-inn">
+            <span class="post-navi-front">КОНЕЦ <i class="icon-right"></i></span>
+            <span class="post-navi-back">КОНЕЦ</span>
           </div>
-        </div><!-- End eleven columns -->
-      </div><!-- End Blog -->
-    </div><!-- End row -->
-    <hr>
-  </div><!-- container -->
-  
-    <div class="u-cf"></div>
-</section>
-
-
-
-{% endfor %}
-
-
-
-<div class="container">
-  <div class="row">
-  {% if paginator.total_pages > 1 %}
-     <a href="{{ paginator.previous_page_path | replace: '//', '/' }}" class="post-navi-a post-navi-a-pre six columns">
-      <div class="post-navi-a-inn">
-        <span class="post-navi-front"><i class="icon-left"></i> НАЧАЛО</span>
-          <span class="post-navi-back">НАЧАЛО</span>
-      </div>
-    </a>
-
-    <a href="{{ paginator.next_page_path | replace: '//', '/' }}" class="post-navi-a post-navi-a-next six columns">
-
-      <div class="post-navi-a-inn">
-        <span class="post-navi-front">КОНЕЦ <i class="icon-right"></i></span>
-        <span class="post-navi-back">КОНЕЦ</span>
-      </div>
-    </a>
-  <div class="clearfix"> </div>
+        </a>
+        <div class="clearfix"> </div>
  
-{% endif %}
+      {% endif %}
 
-</div>
+    </div>
 
     
-  </div>
+<br>
 
 
 

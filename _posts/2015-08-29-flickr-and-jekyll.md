@@ -4,7 +4,7 @@ title: "Как добавить изображение из Flickr в блог J
 description: "Установка плагиа в генератор сайтов Jekyll для пользователей Flickr"
 category: Jekyll
 tags: [jekyll, flickr, plugin]
-image: https://farm1.staticflickr.com/636/20348431344_ac4689d224
+image: https://farm1.staticflickr.com/636/20348431344_ac4689d224_c.jpg
 ---
 
 

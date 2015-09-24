@@ -7,7 +7,10 @@ header{background: $color-thema;
 
 ol, ul {list-style: none;}
 
-
+img { 
+  max-width: 100%;
+  height: auto; } 
+  
 .img-circle{
   border-radius:500px;
   float: left;
@@ -77,9 +80,7 @@ input, textarea {
     color: #333;
     font-size: 1.2em;}
 
-img { 
-  max-width: 100%;
-  height: auto; }
+
 
 .main{
   margin-top: 50px;
