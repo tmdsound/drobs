@@ -1,19 +1,19 @@
 
-http://localhost:4000/404
-http://localhost:4000/about
-http://localhost:4000/archive
-http://localhost:4000/categories
-http://localhost:4000/
-http://localhost:4000/sitemap
-http://localhost:4000/sitemap.txt
-http://localhost:4000/assets/css/skeleton.css
-http://localhost:4000/assets/css/style.css
-http://localhost:4000/page2/
+http://tmdsound.github.io/404
+http://tmdsound.github.io/about
+http://tmdsound.github.io/archive
+http://tmdsound.github.io/categories
+http://tmdsound.github.io/
+http://tmdsound.github.io/sitemap
+http://tmdsound.github.io/sitemap.txt
+http://tmdsound.github.io/assets/css/skeleton.css
+http://tmdsound.github.io/assets/css/style.css
+http://tmdsound.github.io/page2/
 
-http://localhost:4000/2015/09/test.html
-http://localhost:4000/jekyll/2015/09/jekyll.html
-http://localhost:4000/jekyll/2015/08/flickr-and-jekyll.html
-http://localhost:4000/jekyll/2015/01/links.html
-http://localhost:4000/web/2014/08/shortlink.html
-http://localhost:4000/web/2014/08/godrive.html
-http://localhost:4000/jekyll/2014/08/001.html
+http://tmdsound.github.io/2015/09/test.html
+http://tmdsound.github.io/jekyll/2015/09/jekyll.html
+http://tmdsound.github.io/jekyll/2015/08/flickr-and-jekyll.html
+http://tmdsound.github.io/jekyll/2015/01/links.html
+http://tmdsound.github.io/web/2014/08/shortlink.html
+http://tmdsound.github.io/web/2014/08/godrive.html
+http://tmdsound.github.io/jekyll/2014/08/001.html
