@@ -34,18 +34,19 @@
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
-  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <!-- <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'> -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="/drobs/assets/css/normalize.css">
-  <link rel="stylesheet" href="/drobs/assets/css/skeleton.css">
-  <link rel="stylesheet" href="/drobs/assets/css/style.css">
-<script type="text/javascript" src="/drobs/assets/js/queryloader2.min.js"></script>
+  <link rel="stylesheet" href="/assets/css/normalize.css">
+  <link rel="stylesheet" href="/assets/css/skeleton.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/fontello.css">
+<script async type="text/javascript" src="/assets/js/queryloader2.min.js"></script>
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="/drobs/images/favicon.png">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
 
 </head>
 
@@ -141,7 +142,7 @@
           </div>
 
           <div >
-          <p>
+          <p>$.cloudinary.image(“droboshok/21056160082_dfb20de9b3_c.jpg”)
 </p>
           </div>
         </div><!-- End eleven columns -->
@@ -162,7 +163,7 @@
     <div class="row">
       
       <div class="eleven columns blog-img" >
-        <a href="http://localhost:4000/jekyll/2015/09/jekyll.html" title="Большая шпаргалка для Jekyll. "><img alt="Большая шпаргалка для Jekyll. " src="https://farm1.staticflickr.com/778/21056160082_dfb20de9b3_c.jpg"></a>
+        <a href="http://localhost:4000/jekyll/2015/09/jekyll.html" title="Большая шпаргалка для Jekyll. "><img alt="Большая шпаргалка для Jekyll. " src="http://res.cloudinary.com/droboshok/image/upload/v1443085223/droboshok/jekyll.jpg"></a>
       </div><!-- End Blog-img -->
       
     </div><!-- EndRow -->
@@ -215,7 +216,7 @@ $ gem install jekyll
     <div class="row">
       
       <div class="eleven columns blog-img" >
-        <a href="http://localhost:4000/jekyll/2015/08/flickr-and-jekyll.html" title="Как добавить изображение из Flickr в блог Jekyll"><img alt="Как добавить изображение из Flickr в блог Jekyll" src="https://farm1.staticflickr.com/636/20348431344_ac4689d224_c.jpg"></a>
+        <a href="http://localhost:4000/jekyll/2015/08/flickr-and-jekyll.html" title="Как добавить изображение из Flickr в блог Jekyll"><img alt="Как добавить изображение из Flickr в блог Jekyll" src="https://farm1.staticflickr.com/636/20348431344_ac4689d224"></a>
       </div><!-- End Blog-img -->
       
     </div><!-- EndRow -->
@@ -302,7 +303,7 @@ $ gem install jekyll
   
      <a href="" class="post-navi-a post-navi-a-pre six columns">
       <div class="post-navi-a-inn">
-        <span class="post-navi-front"><i class="fa fa-long-arrow-left"></i> НАЧАЛО</span>
+        <span class="post-navi-front"><i class="icon-left"></i> НАЧАЛО</span>
           <span class="post-navi-back">НАЧАЛО</span>
       </div>
     </a>
@@ -310,7 +311,7 @@ $ gem install jekyll
     <a href="/page2" class="post-navi-a post-navi-a-next six columns">
 
       <div class="post-navi-a-inn">
-        <span class="post-navi-front">КОНЕЦ <i class="fa fa-long-arrow-right"></i></span>
+        <span class="post-navi-front">КОНЕЦ <i class="icon-right"></i></span>
         <span class="post-navi-back">КОНЕЦ</span>
       </div>
     </a>
@@ -337,17 +338,17 @@ $ gem install jekyll
               <div class="columns six">
               <a href="index.html" class="logo-1">DROBO<span class="high-light">SHOK</span></a>
                 <ol class="social">
-                  <li><a title="Twitter" href="https://www.twitter.com/droboshok" target="_blank"><i class="fa fa-twitter"></i>Twitter</a></li>
-                  <li><a title="Facebook" href="https://www.facebook.com/droboshok" target="_blank"><i class="fa fa-facebook "></i>Facebook</a></li>
-                  <li><a title="Instagram" href="https://instagram.com/droboshok" target="_blank"><i class="fa fa-instagram"></i>Instagram</a></li>
-                  <li><a title="Github" href="https://github.com/droboshok/" target="_blank"><i class="fa fa-github-alt"></i>Github</a></li>
+                  <li><a title="Twitter" href="https://www.twitter.com/droboshok" target="_blank"><i class="icon-twitter"></i>Twitter</a></li>
+                  <li><a title="Facebook" href="https://www.facebook.com/droboshok" target="_blank"><i class="icon-facebook "></i>Facebook</a></li>
+                  <li><a title="Instagram" href="https://instagram.com/droboshok" target="_blank"><i class="icon-picture"></i>Instagram</a></li>
+                  <li><a title="Github" href="https://github.com/droboshok/" target="_blank"><i class="icon-github"></i>Github</a></li>
 
                 </ol>
               </div>
       
               <div class="columns six">
               <p><h5>Подпишись</h5> на новости Droboshok.<br>Будь в курсе всех изменений в моем блоге</p>
-                <link type="text/css" rel="stylesheet" href="https://cp.unisender.com/v5/template-editor-new/js/lib/datepicker/pikaday.css"/><script type="text/javascript" src="https://cp.unisender.com/v5/template-editor-new/js/lib/moment/moment-with-langs.min.js"></script><script type="text/javascript" src="https://cp.unisender.com/v5/template-editor-new/js/lib/datepicker/pikaday.js"></script><script type="text/javascript" src="https://cp.unisender.com/v5/template-editor-new/js/app/lang/ru.js"></script><script type="text/javascript" src="https://cp.unisender.com/v5/template-editor-new/js/app/preview/form/form-js.js"></script>
+                
                 <form method="POST" action="http://cp.unisender.com/ru/subscribe?hash=5yxccg4j88dqew9t8f9i46j694zq79y4do97317e" name="subscribtion_form" target="_blank" class="row">
                   <div class="eight columns">
         
@@ -372,7 +373,7 @@ $ gem install jekyll
     
   <!-- JS
   ================================================== -->
-<script type="text/javascript" src="/drobs/assets/js/jquery-2.1.3.min.js"></script>
+<script async type="text/javascript" src="/assets/js/jquery-2.1.3.min.js"></script>
   
 
 </body>
