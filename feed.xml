@@ -3,10 +3,10 @@
   <channel>
     <title>Droboshok</title>
     <description>Thoughts, stories and ideas.</description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 24 Sep 2015 01:04:14 +0300</pubDate>
-    <lastBuildDate>Thu, 24 Sep 2015 01:04:14 +0300</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 24 Sep 2015 09:07:42 +0300</pubDate>
+    <lastBuildDate>Thu, 24 Sep 2015 09:07:42 +0300</lastBuildDate>
     <generator>Jekyll v3.0.0.pre.beta8</generator>
     
       <item>
@@ -14,8 +14,8 @@
         <description>
 </description>
         <pubDate>Thu, 24 Sep 2015 00:00:00 +0300</pubDate>
-        <link>/2015/09/test.html</link>
-        <guid isPermaLink="true">/2015/09/test.html</guid>
+        <link>http://localhost:4000/2015/09/test.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2015/09/test.html</guid>
         
         
       </item>
@@ -411,8 +411,8 @@ Bundler&lt;/p&gt;
 
 </description>
         <pubDate>Mon, 14 Sep 2015 00:00:00 +0300</pubDate>
-        <link>/jekyll/2015/09/jekyll.html</link>
-        <guid isPermaLink="true">/jekyll/2015/09/jekyll.html</guid>
+        <link>http://localhost:4000/jekyll/2015/09/jekyll.html</link>
+        <guid isPermaLink="true">http://localhost:4000/jekyll/2015/09/jekyll.html</guid>
         
         <category>jekyll</category>
         
@@ -493,8 +493,8 @@ api_key и secret
 По вопросам редактирования параметров плагина обращайтесь на почту или соц.сети.&lt;/p&gt;
 </description>
         <pubDate>Sat, 29 Aug 2015 00:00:00 +0300</pubDate>
-        <link>/jekyll/2015/08/flickr-and-jekyll.html</link>
-        <guid isPermaLink="true">/jekyll/2015/08/flickr-and-jekyll.html</guid>
+        <link>http://localhost:4000/jekyll/2015/08/flickr-and-jekyll.html</link>
+        <guid isPermaLink="true">http://localhost:4000/jekyll/2015/08/flickr-and-jekyll.html</guid>
         
         <category>jekyll</category>
         
@@ -594,8 +594,8 @@ api_key и secret
 
 </description>
         <pubDate>Sun, 04 Jan 2015 00:00:00 +0200</pubDate>
-        <link>/jekyll/2015/01/links.html</link>
-        <guid isPermaLink="true">/jekyll/2015/01/links.html</guid>
+        <link>http://localhost:4000/jekyll/2015/01/links.html</link>
+        <guid isPermaLink="true">http://localhost:4000/jekyll/2015/01/links.html</guid>
         
         <category>Jekyll</category>
         
@@ -625,8 +625,8 @@ api_key и secret
 &lt;p&gt;Теперь эту ссылку вы можете вставлять в код страницы или отправлять друзьям в соц.сетях, по почте или в смс&lt;/p&gt;
 </description>
         <pubDate>Tue, 26 Aug 2014 00:00:00 +0300</pubDate>
-        <link>/web/2014/08/shortlink.html</link>
-        <guid isPermaLink="true">/web/2014/08/shortlink.html</guid>
+        <link>http://localhost:4000/web/2014/08/shortlink.html</link>
+        <guid isPermaLink="true">http://localhost:4000/web/2014/08/shortlink.html</guid>
         
         <category>Google</category>
         
@@ -659,8 +659,8 @@ api_key и secret
 
 </description>
         <pubDate>Tue, 26 Aug 2014 00:00:00 +0300</pubDate>
-        <link>/web/2014/08/godrive.html</link>
-        <guid isPermaLink="true">/web/2014/08/godrive.html</guid>
+        <link>http://localhost:4000/web/2014/08/godrive.html</link>
+        <guid isPermaLink="true">http://localhost:4000/web/2014/08/godrive.html</guid>
         
         <category>Google</category>
         
@@ -714,8 +714,8 @@ api_key и secret
 
 </description>
         <pubDate>Thu, 21 Aug 2014 00:00:00 +0300</pubDate>
-        <link>/jekyll/2014/08/001.html</link>
-        <guid isPermaLink="true">/jekyll/2014/08/001.html</guid>
+        <link>http://localhost:4000/jekyll/2014/08/001.html</link>
+        <guid isPermaLink="true">http://localhost:4000/jekyll/2014/08/001.html</guid>
         
         <category>Jekyll</category>
         
