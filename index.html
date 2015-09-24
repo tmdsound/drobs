@@ -12,7 +12,7 @@ layout: default_h
     <div class="row">
       {% if post.image %}
       <div class="eleven columns blog-img" >
-        <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}"><img alt="{{ post.title }}" src="{{ post.image | append: '_c.jpg'}}"></a>
+        <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}"><img alt="{{ post.title }}" src="{{ post.image }}"></a>
       </div><!-- End Blog-img -->
       {% endif %}
     </div><!-- EndRow -->
@@ -57,7 +57,7 @@ layout: default_h
   {% if paginator.total_pages > 1 %}
      <a href="{{ paginator.previous_page_path | replace: '//', '/' }}" class="post-navi-a post-navi-a-pre six columns">
       <div class="post-navi-a-inn">
-        <span class="post-navi-front"><i class="fa fa-long-arrow-left"></i> НАЧАЛО</span>
+        <span class="post-navi-front"><i class="icon-left"></i> НАЧАЛО</span>
           <span class="post-navi-back">НАЧАЛО</span>
       </div>
     </a>
@@ -65,7 +65,7 @@ layout: default_h
     <a href="{{ paginator.next_page_path | replace: '//', '/' }}" class="post-navi-a post-navi-a-next six columns">
 
       <div class="post-navi-a-inn">
-        <span class="post-navi-front">КОНЕЦ <i class="fa fa-long-arrow-right"></i></span>
+        <span class="post-navi-front">КОНЕЦ <i class="icon-right"></i></span>
         <span class="post-navi-back">КОНЕЦ</span>
       </div>
     </a>

@@ -15,8 +15,8 @@ layout: default
 
 
       <div class="twelve columns images" align="center">
-        <a href="{{ page.image | append: "_c.jpg " }}" title="{{ page.title }}"  >
-                      <img src="{{ page.image | append: "_c.jpg "}}" alt="{{ page.title }}" align="center">
+        <a href="{{ page.image }}" title="{{ page.title }}"  >
+                      <img src="{{ page.image }}" alt="{{ page.title }}" align="center">
                     </a>
       </div><!--end 4-->
 
@@ -67,8 +67,8 @@ layout: default
     
 
         
-            <a href="{{ BASE_PATH }}{{ page.previous.url }}" class="post-navi-a post-navi-a-pre six columns"><div class="post-navi-a-inn"><span class="post-navi-front"><i class="fa fa-long-arrow-left"></i> БЛИЗКО</span><span class="post-navi-back">{{ page.previous.title }}</span></div></a>
-            <a href="{{ BASE_PATH }}{{ page.next.url }}" class="post-navi-a post-navi-a-pre six columns"><div class="post-navi-a-inn"><span class="post-navi-front">ДАЛЕКО <i class="fa fa-long-arrow-right"></i></span><span class="post-navi-back">{{ page.next.title }}</span></div></a>
+            <a href="{{ BASE_PATH }}{{ page.previous.url }}" class="post-navi-a post-navi-a-pre six columns"><div class="post-navi-a-inn"><span class="post-navi-front"><i class="icon-left"></i> БЛИЗКО</span><span class="post-navi-back">{{ page.previous.title }}</span></div></a>
+            <a href="{{ BASE_PATH }}{{ page.next.url }}" class="post-navi-a post-navi-a-pre six columns"><div class="post-navi-a-inn"><span class="post-navi-front">ДАЛЕКО <i class="icon-right"></i></span><span class="post-navi-back">{{ page.next.title }}</span></div></a>
         
 
   </div>
