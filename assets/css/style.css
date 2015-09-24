@@ -8,6 +8,10 @@ header {
 ol, ul {
   list-style: none; }
 
+img {
+  max-width: 100%;
+  height: auto; }
+
 .img-circle {
   border-radius: 500px;
   float: left;
@@ -67,10 +71,6 @@ footer a {
 input, textarea {
   color: #333;
   font-size: 1.2em; }
-
-img {
-  max-width: 100%;
-  height: auto; }
 
 .main {
   margin-top: 50px; }
@@ -211,7 +211,8 @@ section {
   text-transform: uppercase;
   font-size: 14px;
   width: 80%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  font-family: "Times New Roman", sans-serif; }
 
 .data-big {
   margin-top: 10px;
@@ -219,10 +220,10 @@ section {
   font-size: 30px;
   line-height: 50px;
   font-weight: bold;
-  font-family: tahoma; }
+  font-family: "Times New Roman", sans-serif; }
 
 .blog-img {
-  text-align: center; }
+  text-align: right; }
 
 .blog {
   margin-top: 20px; }
