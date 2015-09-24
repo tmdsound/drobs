@@ -32,7 +32,7 @@ permalink: /:categories/:year/:month/:title.html
 
 
 
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md","node_modules", "gulpfile.js", "PR.sublime-project","Gemfile", "Gemfile.lock", "_config.yml"]
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md","node_modules", "gulpfile.js", "PR.sublime-project","Gemfile", "Gemfile.lock", "_config.yml",".jekyll-metadata"]
 highlighter: pygments
 
 flickr :
